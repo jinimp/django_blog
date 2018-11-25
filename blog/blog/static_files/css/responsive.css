@@ -1,0 +1,62 @@
+/*================= Hi-res laptops and desktops================= */
+@media (min-width: 1170px) and (max-width: 1281px) {	
+
+}
+/*================ Normal desktop :992px.==================== */
+@media (min-width: 992px) and (max-width: 1169px) {
+
+}
+/*================ Tablet desktop :768px.==================*/
+@media (min-width: 768px) and (max-width: 991px) {	
+	
+	.header-middle-contact a:first-child {
+	    display: block;
+	}
+	.quote-middle a {
+	    padding: 11px 20px;
+	}
+	.about-area .col {
+	    padding-right: 0;
+	}
+	a.about-link i {
+	    padding-right: 5px;
+	}
+
+}
+/*============ Min Width "768px" ==============*/
+@media(min-width:768px) {
+	.modal-dialog {
+	    width: 100%;
+	    max-width: 960px;
+	    margin: 50px auto;
+	}
+
+}
+/*================== small mobile :320px. ===================*/
+@media (max-width: 767px) {	
+	/*Header*/
+	.header-top-area p { margin-bottom: 10px;}
+	.header-top-area .social-links { float: none;}
+	.header-middle-contact a { display: block;}
+	.quote-middle a { margin-top: 0; float: none;}
+	.order-one{ order: 1;}
+	.order-two{ order: 2;}
+	/*slider*/
+	.single-slide-content h1 { font-size: 40px; line-height: 40px;}
+	.single-slide-content h2 { font-size: 36px;}
+	.single-slide-content > p { font-size: 14px; line-height: 20px;}
+	/*Footer top*/
+	.offoce-info { width: 100%; text-align: center;}
+	span.footer-social-links { text-align: center;}
+	/*single service*/
+	.single-page-service { padding-left: 0;}
+	/*Testimonial*/
+	.client-desc { top: 0;}
+	.testimonial-area .owl-dots { bottom: -40px;}
+}
+/* ======================Large Mobile :480px.================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+.container {width:450px}
+
+
+}

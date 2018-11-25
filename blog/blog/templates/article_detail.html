@@ -1,0 +1,358 @@
+﻿<!doctype html>
+<html class="no-js" lang="utf-8">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="keywords" content="python, r, database, hadoop">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>文章详情</title>
+		<!-- 网站Logo -->
+        <link rel="shortcut icon" href="/static_files/img/favicon.ico" >
+		<!-- css加载 -->
+        <link rel="stylesheet" href="/static_files/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static_files/css/theme-plugins.css">
+		<link rel="stylesheet" href="/static_files/css/style.css">
+		<!-- <link rel="stylesheet" href="/static_files/css/responsive.css"><!--
+        <!-- 加载文章样式: 显示代码高亮/blockquote引用 -->
+        <link rel="stylesheet" href="/static_files/css/article_style.css">
+
+        <!-- js加载 -->
+        <script src="/static_files/js/js_file/vue-2.5.16.js"></script>
+        <script src="/static_files/js/js_file/axios-0.18.0.min.js"></script>
+        <script src="/static_files/js/js_file/bootstrap.min.js"></script>
+        <script src="/static_files/js/js_file/jquery-2.2.1.min.js"></script>
+        <script src="/static_files/js/js_file/plugins.js"></script>
+        <script src="/static_files/js/js_file/main.js"></script>
+    </head>
+    <body>
+
+        <!-- 进入页面前显示一段loading -->
+		<div class="preloader-wrap">
+			<div class="cube-wrapper">
+				<div class="cube-folding">
+					<span class="leaf1"></span>
+					<span class="leaf2"></span>
+					<span class="leaf3"></span>
+					<span class="leaf4"></span>
+				</div>
+				<span class="loading" data-name="Loading">Loading</span>
+			</div>
+		</div>
+
+		<!-- 整个页面的开始 -->
+		<div class="wrapper" id="app">
+			<!-- 顶部 -->
+			<header class="header-area primary-header">
+
+				<!-- 导航栏上面 -->
+				<div class="header-middle-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="site-branding">
+									<a href="/"><img src="/static_files/img/logo.png" alt="Logo"></a>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="header-middle-contact">
+									<a href=""><i class="icofont-telephone"></i>123 456 5678</a>
+									<a href="mailto:"><i class="icofont-envelope"></i>123456@qq.com</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="quote-middle">
+								 	<a href="/oauth/login/" class="theme-btn btn-style-order-nav">登录</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 导航栏 -->
+				<div class="navigation-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-md-10 order-two">
+								<!-- Start Digitalizer Nav -->
+								<div class="main-menu-wrap">
+									<nav class="digitalizer-nav">
+										<ul class="menu">
+											<li class="has-dropdown"><a href="/">首页</a>
+												<ul><!-- Dropdown Items -->
+													<li><a href="index.html">Home Version One</a></li>
+													<li><a href="index-2.html">Home Version Two</a></li>
+													<li><a href="index-3.html">Home Version Three</a></li>
+													<li><a href="index-4.html">Home Version Four</a></li>
+													<li><a href="index-5.html">Home Version Five</a></li>
+												</ul>
+											</li>
+											<li class="has-dropdown"><a href="#">技术分享</a>
+											    <ul><!-- Dropdown Items -->
+												    <li><a href="about.html">About Us One</a></li>
+												    <li><a href="about-2.html">About Us Two</a></li>
+												    <li><a href="about-3.html">About Us Three</a></li>
+													<li class="has-dropdown"><a href="#">Services</a>
+														<ul><!-- Dropdown Items -->
+															<li><a href="service-one.html">Service Verion One</a> </li>
+															<li><a href="service-two.html">Service Verion Two</a> </li>
+															<li><a href="service-three.html">Service Verion Three</a> </li>
+															<li><a href="service-single.html">Single Service</a> </li>
+														</ul>
+													</li>
+													<li><a href="team.html">Team</a></li>
+													<li><a href="team-2.html">Team Two</a></li>
+													<li><a href="team-single.html">Team Single</a></li>
+													<li><a href="404.html">404 Page</a></li>
+												</ul>
+											</li>
+											<li class="has-dropdown"><a href="#">前端开发</a>
+											    <ul><!-- Dropdown Items -->
+												    <li><a href="service-one.html">Service One</a></li>
+												    <li><a href="service-two.html">Service Two</a></li>
+												    <li><a href="service-three.html">Service Three</a></li>
+												    <li><a href="service-single.html">Service Single</a></li>
+												    <li class="has-dropdown"><a href="#">Project</a>
+														<ul><!-- Dropdown Items -->
+															<li><a href="project-1.html">Project One</a></li>
+															<li><a href="project-2.html">Project Two</a></li>
+															<li><a href="project-3.html">Project Three</a></li>
+															<li><a href="project-single.html">Project Single</a></li>
+														</ul>
+												    </li>
+												</ul>
+											</li>
+											<li class="has-dropdown"><a href="#">后台开发</a>
+												<!-- Start Mega Menu -->
+												<ul class="mega-menu three-column mega-center">
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Accordions</a></li>
+															<li><a href="#">Alarts</a></li>
+															<li><a href="#">Buttons</a></li>
+															<li><a href="#">Call Action</a></li>
+															<li><a href="#">Google Map</a></li>
+															<li><a href="#">Font Icons</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Lists</a></li>
+															<li><a href="#">Image Container</a></li>
+															<li><a href="#">Modals</a></li>
+															<li><a href="#">Panels</a></li>
+															<li><a href="#">Pies Graph</a></li>
+															<li><a href="#">Pricing Tables</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Social Buttons</a></li>
+															<li><a href="#">Tabs</a></li>
+															<li><a href="#">Tables</a></li>
+															<li><a href="#">Widgets</a></li>
+															<li><a href="#">Team Members</a></li>
+															<li><a href="#">Typography</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+												</ul>
+												<!-- End Mega Menu -->
+											</li>
+											<li ><a href="contact.html">关于</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!-- End Digitalizer Nav -->
+								<!-- Mobile Menu Active here. Don't Remove it -->
+								<div class="mobile-menu-area"></div>
+							</div>
+
+							<div class="col-8 col-md-2 order-one">
+								<!-- Start Header Search -->
+								<div class="header-search">
+									<form role="search" method="get" class="search-form" action="#">
+										<label>
+											<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+										</label>
+										<input type="submit" class="search-submit" value="Search">
+									</form>
+								</div>
+								<!-- End Header Search -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Start Page Header -->
+			<div class="banner-area text-center overlay-bg-5">
+				<div class="container"> 
+					<div class="row">
+						<div class="col"> 
+							<!-- Start Banner Content -->
+							<div class="banner-content">						
+								<!-- Page Title -->
+								<h2 class="uppercase">Latest News</h2>
+								<p class="m-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+							</div>
+							<!-- End Banner Content -->							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bradcumb-area">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<!-- Start Breadcrumb -->
+							<ul class="breadcrumbs list-inline">
+								<li>
+                                    <a href="/">首页</a>
+                                    <i class="icofont-double-right"></i>
+                                </li>
+								<li>
+                                    <a :href="'/article_list/?cid=' + article_detail.category.id"><% article_detail.category.name + '文章列表'%></a>
+                                    <i class="icofont-double-right"></i>
+                                </li>
+                                <li><% article_detail.title %></li>
+							</ul>
+							<!-- End Breadcrumb -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Page Header -->
+			<!-- Start Site Content  -->
+			<div class="site-content ptb-110">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-7 col-md-9">
+							<!-- Start Content Area -->
+							<div id="primary" class="content-area">
+								<div class="single-news-wrap">
+
+									<!-- 标题 -->
+									<div class="entry-header"> 
+										<h4 class="entry-title"><% article_detail.title %></h4>
+									</div>
+
+									<!-- 作者/创建时间/标签 -->
+									<div class="entry-meta">
+										<span><i class="icofont-user-alt-3"></i><a href="#"><% article_detail.author %></a></span>
+										<span><i class="icofont-ui-calendar"></i><a href="#"><% article_detail.create_time %></a></span>
+										<span v-for="adt in article_detail.tags">
+                                            <i class="icofont-tag"></i> <a href="#"><% adt %></a>
+                                        </span>
+									</div>
+
+									<!-- 文章内容 -->
+                                    <!-- 显示文章的内容, 直接写出来vue无法解析html, 因此需要写在v-html里 -->
+                                    <div class="entry-content" v-html="article_detail.body">
+                                        <% article_detail.body %>
+                                    </div>
+								</div>
+							</div>
+
+							<!-- 评论内容 -->
+							<div class="author-area">
+								<h3>评论内容 (2)</h3>
+								<!-- 父评论 -->
+								<div class="single-author mb-40">
+									<div class="author-thumb">
+										<!-- 头像 -->
+										<a href="#"><img src="assets/img/post/post7.jpg" alt=""></a>
+									</div>
+									<div class="author-text">
+										<!-- 作者及发表时间 -->
+										<h4 class="author-name">Smith Jhon <span>15 Jan, 2014</span></h4>
+										<!-- 内容 -->
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+									</div>
+								</div>
+								<!-- 子评论 -->
+								<div class="single-author ml-35 mb-65">
+									<div class="author-thumb">
+										<!-- 头像 -->
+										<a href="#"><img src="assets/img/post/post8.jpg" alt=""></a>
+									</div>
+									<div class="author-text">
+										<!-- 作者及发表时间 -->
+										<h4 class="author-name">Smith <span>15 Jan, 2014</span></h4>
+										<!-- 内容 -->
+										<p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- 发表评论 -->
+							<div class="comment-form-area">
+								<h4>发表评论</h4>
+								<form action="#" class="contact-us-form">
+									<div class="single-field">
+										<textarea class="form-control" rows="5" id="comment" placeholder="请输入评论内容..."></textarea>
+									</div>
+									<button class="btn btn-contact" type="submit">提交</button>
+								</form>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-5 col-md-3">
+							<aside id="secondary" class="widget-area">
+								<!-- 点击排行 -->
+								<div class="widget widget-archives">
+									<h4 class="widget-title">点击排行</h4>
+									<ul>
+										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+									</ul>
+								</div>
+								<!-- 最新文章	 -->
+								<div class="widget widget-archives">
+									<h4 class="widget-title">最新文章</h4>
+									<ul>
+										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+									</ul>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Site Content  -->
+
+			<!-- 底部 -->
+			<footer class="footer-area">
+				<!-- 版权 -->
+				<div class="copyright-area">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>
+									© 2018 <a href="/">JinQuanLin.</a> All Right Reserved
+									<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">
+										<img src="/static_files/img/beianbgs.png" alt="beianbgs" style="width: 14px; height: 16px;">
+										粤ICP备18104884-2号
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+        <!-- End Wrapper -->
+
+        <!-- own -->
+		<script src="/static_files/js/host.js"></script>
+        <script src="/static_files/js/article_detail.js"></script>
+    </body>
+</html>

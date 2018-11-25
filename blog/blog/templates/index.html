@@ -1,0 +1,507 @@
+﻿<!doctype html>
+<html class="no-js" lang="utf-8"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="keywords" content="python, r, database, hadoop">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>首页</title>
+		<!-- 网站Logo -->
+        <link rel="shortcut icon" href="/static_files/img/favicon.ico" >
+		<!-- css加载 -->
+        <link rel="stylesheet" href="/static_files/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static_files/css/theme-plugins.css">
+		<link rel="stylesheet" href="/static_files/css/style.css">
+		<link rel="stylesheet" href="/static_files/css/responsive.css">
+        <!-- js加载 -->
+        <script src="/static_files/js/js_file/vue-2.5.16.js"></script>
+        <script src="/static_files/js/js_file/axios-0.18.0.min.js"></script>
+        <script src="/static_files/js/js_file/bootstrap.min.js"></script>
+        <script src="/static_files/js/js_file/jquery-2.2.1.min.js"></script>
+        <script src="/static_files/js/js_file/plugins.js"></script>
+        <script src="/static_files/js/js_file/main.js"></script>
+    </head>
+    <body>
+
+        <!-- 进入页面前显示一段loading -->
+		<div class="preloader-wrap">
+			<div class="cube-wrapper">
+				<div class="cube-folding">
+					<span class="leaf1"></span>
+					<span class="leaf2"></span>
+					<span class="leaf3"></span>
+					<span class="leaf4"></span>
+				</div>
+				<span class="loading" data-name="Loading">Loading</span>
+			</div>
+		</div>
+
+		<!-- 整个页面的开始 -->
+		<div class="wrapper">
+			<!-- 顶部 -->
+			<header class="header-area primary-header">
+
+				<!-- 导航栏上面 -->
+				<div class="header-middle-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="site-branding">
+									<a href="/"><img src="/static_files/img/logo.png" alt="Logo"></a>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="header-middle-contact">
+									<a href=""><i class="icofont-telephone"></i>123 456 5678</a>
+									<a href="mailto:"><i class="icofont-envelope"></i>123456@qq.com</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="quote-middle">
+								 	<a href="/oauth/login/" class="theme-btn btn-style-order-nav">登录</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 导航栏 -->
+				<div class="navigation-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-md-10 order-two">
+								<!-- Start Digitalizer Nav -->
+								<div class="main-menu-wrap">
+									<nav class="digitalizer-nav">
+										<ul class="menu">
+											<li class="has-dropdown"><a href="/">首页</a>
+												<ul><!-- Dropdown Items -->
+													<li><a href="index.html">Home Version One</a></li>
+													<li><a href="index-2.html">Home Version Two</a></li>
+													<li><a href="index-3.html">Home Version Three</a></li>
+													<li><a href="index-4.html">Home Version Four</a></li>
+													<li><a href="index-5.html">Home Version Five</a></li>
+												</ul>
+											</li>
+											<li class="has-dropdown"><a href="#">技术分享</a>
+											    <ul><!-- Dropdown Items -->
+												    <li><a href="about.html">About Us One</a></li>
+												    <li><a href="about-2.html">About Us Two</a></li>
+												    <li><a href="about-3.html">About Us Three</a></li>
+													<li class="has-dropdown"><a href="#">Services</a>
+														<ul><!-- Dropdown Items -->
+															<li><a href="service-one.html">Service Verion One</a> </li>
+															<li><a href="service-two.html">Service Verion Two</a> </li>
+															<li><a href="service-three.html">Service Verion Three</a> </li>
+															<li><a href="service-single.html">Single Service</a> </li>
+														</ul>					
+													</li>
+													<li><a href="team.html">Team</a></li>
+													<li><a href="team-2.html">Team Two</a></li>
+													<li><a href="team-single.html">Team Single</a></li>
+													<li><a href="404.html">404 Page</a></li>
+												</ul>											
+											</li>
+											<li class="has-dropdown"><a href="#">前端开发</a>
+											    <ul><!-- Dropdown Items -->
+												    <li><a href="service-one.html">Service One</a></li>
+												    <li><a href="service-two.html">Service Two</a></li>
+												    <li><a href="service-three.html">Service Three</a></li>
+												    <li><a href="service-single.html">Service Single</a></li>
+												    <li class="has-dropdown"><a href="#">Project</a>
+														<ul><!-- Dropdown Items -->
+															<li><a href="project-1.html">Project One</a></li>
+															<li><a href="project-2.html">Project Two</a></li>
+															<li><a href="project-3.html">Project Three</a></li>
+															<li><a href="project-single.html">Project Single</a></li>
+														</ul>
+												    </li>
+												</ul>											
+											</li>
+											<li class="has-dropdown"><a href="#">后台开发</a>
+												<!-- Start Mega Menu -->
+												<ul class="mega-menu three-column mega-center">
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Accordions</a></li>
+															<li><a href="#">Alarts</a></li>
+															<li><a href="#">Buttons</a></li>
+															<li><a href="#">Call Action</a></li>
+															<li><a href="#">Google Map</a></li>
+															<li><a href="#">Font Icons</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Lists</a></li>
+															<li><a href="#">Image Container</a></li>
+															<li><a href="#">Modals</a></li>
+															<li><a href="#">Panels</a></li>
+															<li><a href="#">Pies Graph</a></li>
+															<li><a href="#">Pricing Tables</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Social Buttons</a></li>	
+															<li><a href="#">Tabs</a></li>
+															<li><a href="#">Tables</a></li>
+															<li><a href="#">Widgets</a></li>
+															<li><a href="#">Team Members</a></li>
+															<li><a href="#">Typography</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->				
+												</ul>
+												<!-- End Mega Menu -->
+											</li>
+											<li ><a href="contact.html">关于</a></li>
+										</ul>
+									</nav> 
+								</div>
+								<!-- End Digitalizer Nav -->
+								<!-- Mobile Menu Active here. Don't Remove it -->
+								<div class="mobile-menu-area"></div>
+							</div>
+
+							<div class="col-8 col-md-2 order-one">
+								<!-- Start Header Search -->
+								<div class="header-search">
+									<form role="search" method="get" class="search-form" action="#">
+										<label>
+											<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+										</label>
+										<input type="submit" class="search-submit" value="Search">
+									</form>
+								</div>
+								<!-- End Header Search -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- 第一部分：滑动 -->
+			<div class="slider-area">
+				<div id="welcome-slide" class="slide-controls owl-carousel">
+					<!-- Start Single Slide -->
+					<div class="funfact-area overlay-bg-4">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-6 col-md-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-slightly-smile"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">199</span>
+										<span>Happy clients</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-instagram"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">488</span>
+										<span>PROJECT DONE</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-hour-glass"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">999</span>
+										<span>HOURS WORK</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-coffee-mug"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">899</span>
+										<span>CUPS OFF COFFEE</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="funfact-area overlay-bg-4">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-slightly-smile"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">199</span>
+										<span>Happy clients</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-instagram"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">488</span>
+										<span>PROJECT DONE</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-hour-glass"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">999</span>
+										<span>HOURS WORK</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>
+								<div class="col-sm-3">
+									<!-- Start single fact -->
+									<div class="single-fact text-center">
+										<div class="icon">
+										<i class="icofont-hour-glass"></i>
+										</div>
+										<div class="fact-info"> 
+										<span class="counter">999</span>
+										<span>HOURS WORK</span>
+										</div>
+									</div>
+									<!-- Start single fact -->
+								</div>							
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>
+							
+			<!-- 第二部分：分享R、python、database、云/hadoop、前端等知识 -->
+			<div class="service-area bg-gray pt105-pb110">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<!-- Start Section title -->
+							<section class="section-title text-center">
+								<h3>Share Technology</h3>
+								<p>share able R、python、database、linux、html and clond</p>
+							</section>
+							<!-- End Section title -->
+						</div>
+					</div>
+					<div class="row no-gutters">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c1">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c2">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c3">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c4">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c5">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="digitalizer-service-box service-box-style-1">
+                               <div class="overlay"></div>
+                                <div class="service-box-inner">
+                                    <div class="service-box-content c6">
+                                            <!-- 各分类的跳转链接 -->
+                                            <a href="" target="_blank">
+                                                <!-- 各分类的图片 -->
+                                                <img src="" alt="logo">
+                                            </a>
+                                        <!-- 各分类的名称 -->
+                                        <h3><span class="service-box-title-text"></span>分类名称</h3>
+                                        <!-- 各分类的描述 -->
+                                        <p>分类描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 第三部分：最新文章 -->
+			<div class="home-blog-area bg-gray pt100-pb75" id="app">
+				<div class="container">
+                    <!-- 标题 -->
+					<div class="row">
+						<div class="col">
+							<div class="section-title text-center">
+								<h3>Lastest Article</h3>
+								<p>this model will update the top three lastest article</p>
+							</div>
+						</div>
+					</div>
+                    <!-- 最新的3篇文章 -->
+					<div class="row">
+                        <!-- v-for应该写在col-lx-x里面,这样才能排版在一行 -->
+						<div class="col-lg-4 col-md-6" v-for="article in lastest_article">
+							<!-- Start single post block -->
+							<div class="single-post-block bg-white">
+                                <!-- target="_blank"打开新的窗口 -->
+                                <!-- 前后端分离用下面的链接 -->
+								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
+								<!-- 前后端不分离用下面的链接,因为有模板 -->
+                                <a :href="'/article/?aid=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>
+								<div class="post-block-content">
+									<span class="post-block-date"><% article.create_time %></span>
+									<h5><a :href="'/article/?aid=' + article.id" target="_blank"  style="text-align:center"><% article.title %></a></h5>
+									<span class="post-block-author"><i class="icofont-ui-folder"></i><% article.category %></span>
+									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% article.page_view %>）</span>
+									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% article.comment_count %>）</span>
+									<div class="post-block-excerpt" style="height: 43px;"><% article.abstract %></div>
+									<a class="more" :href="'/article/?aid=' + article.id" target="_blank">
+										Read more <i class="icofont-caret-right"></i>
+									</a>
+								</div>
+							</div>
+							<!-- End single post block -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 底部 -->
+			<footer class="footer-area">
+				<!-- 版权 -->
+				<div class="copyright-area">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p>
+									© 2018 <a href="/">JinQuanLin.</a> All Right Reserved
+									<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">
+										<img src="/static_files/img/beianbgs.png" alt="beianbgs" style="width: 14px; height: 16px;">
+										粤ICP备18104884-2号
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 整个页面的结果 -->
+
+		<!-- 加载js -->
+        <!-- own -->
+        <script src="/static_files/js/host.js"></script>
+        <script src="/static_files/js/index.js"></script>
+        <script src="/static_files/js/index_jquery.js"></script>
+    </body>
+</html>
