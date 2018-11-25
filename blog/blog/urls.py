@@ -36,5 +36,5 @@ if settings.DEBUG:
     # 指定静态文件上传的目录(images, css, javascript, etc.)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# 404页面
+# 404页面,固定变量名handler404
 handler404 = views.page_not_found
