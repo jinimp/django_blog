@@ -76,15 +76,30 @@
 /* -------------------------------- blockquote引用 css样式 ------------------------------------*/
 /* -------------------------------------------------------------------------------------------*/
 blockquote{
-     font: 14px/22px normal helvetica, sans-serif;
-     margin-top: 10px;
-     margin-bottom: 10px;
-     margin-left: 50px;
-     padding-left: 15px;
-     padding-top: 10px;
-     padding-right: 10px;
-     padding-bottom: 10px;
-     border-left: 3px solid #ccc;
-     background-color:#f1f1f1
+     /* font: 14px/22px normal helvetica, sans-serif; */
+     font-size: 1.3em;
+     /* margin-top: 10px; */
+     /* margin-bottom: 10px; */
+     /* margin-left: 50px; */
+     padding-left: 9px;
+     /* padding-top: 10px; */
+     /* padding-right: 10px; */
+     /* padding-bottom: 10px; */
+     border-left: 6px solid #ff7e79;
+     /* background-color:#f1f1f1 */
+}
+
+/* ------------------------------------------------------------------------------------------*/
+/* -------------------------------- pre代码高亮设置字体大小 css样式 --------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+pre {
+    font-size: 1em;
+}
+
+/* ------------------------------------------------------------------------------------------*/
+/* -------------------------------- code行内代码设置背景颜色 css样式 --------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+code {
+    background-color: #f9f2f4;
 }
 

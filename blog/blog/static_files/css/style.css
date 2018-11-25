@@ -1456,12 +1456,13 @@ a.more i {
 }
  .single-news-wrap .entry-content > p {
      margin-bottom: 11px;
-     padding-right: 50px;
+     font-size: 1.2em;
+    /* padding-right: 50px; */
 }
 /*Blog Details*/
  .entry-content strong {
      display: block;
-     padding: 15px 0;
+    /* padding: 15px 0; */
 }
  .blog-social {
      display: block;

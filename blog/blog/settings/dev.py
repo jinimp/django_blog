@@ -354,7 +354,7 @@ HAYSTACK_CONNECTIONS = {
 # 注意：
 # HAYSTACK_SIGNAL_PROCESSOR 的配置保证了在Django运行起来后，有新的数据产生时，
 # haystack仍然可以让Elasticsearch实时生成新数据的索引
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # 开发环境下:
 # 1.在docker中开启elasticsearch容器服务: docker start elasticsearch

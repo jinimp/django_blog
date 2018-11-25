@@ -294,7 +294,7 @@
 									</ul>
 								</div>
 							</div>
-                            <div id="primary" class="content-area" v-else>
+                            <div class="content-area" v-else>
                                 <h4>没有匹配到关于"<% mySearch | string_strap %>"的结果, 请尝试搜索其它关键字...</h4>
                             </div>
 						</div>
@@ -313,69 +313,9 @@
                                     </form>
 								</div>
 
-								<!-- Start Widget Category -->
-							<div class="widget widget-category">
-                                <h4 class="widget-title">categories</h4>
-							    <ul>
-									<li><a href="#"><i class="icofont-double-right"></i> Business</a></li>
-									<li><a href="#"><i class="icofont-double-right"></i> Web Design</a></li>
-									<li><a href="#"><i class="icofont-double-right"></i> Print Design</a></li>
-									<li><a href="#"><i class="icofont-double-right"></i> Development</a></li>
-									<li><a href="#"><i class="icofont-double-right"></i> Clean Code</a></li>
-									<li><a href="#"><i class="icofont-double-right"></i> Templates</a></li>
-							    </ul>
-							</div>
-							<!-- End Widget Category -->
-							<!-- Start Widget Recent Posts -->
-								<div class="widget widget-blog">
-									<!-- Start post title -->
-									<h4 class="widget-title">Recent Posts</h4>
-									<!-- End post title -->
-									<!-- Start widget post -->
-									<div class="widget-post">
-										<a href="#"><img src="/static_files/img/post/post7.jpg" alt="" /></a>
-										<div class="post-content">
-											<a class="title" href="#">Startup Business</a>
-											<p>12 Jan, 2014</p>
-										</div>
-									</div>
-									<!-- End widget post -->
-									<!-- Start widget post -->
-									<div class="widget-post">
-										<a href="#"><img src="/static_files/img/post/post8.jpg" alt="" /></a>
-										<div class="post-content">
-											<a class="title" href="#">Best Business</a>
-											<p>10 jan, 2014</p>
-										</div>
-									</div>
-									<!-- End widget post -->
-									<!-- Start widget post -->
-									<div class="widget-post mb-30">
-										<a href="#"><img src="/static_files/img/post/post9.jpg" alt="" /></a>
-										<div class="post-content">
-											<a class="title" href="#">Startup Business</a>
-											<p>12 Jan, 2014</p>
-										</div>
-									</div>
-									<!-- End widget post -->
-								</div>
-								<!-- End Widget Recent Posts -->
-								<!-- Start Widget Archives	 -->
-								<div class="widget widget-archives">
-									<!-- Start post title -->
-									<h4 class="widget-title">ARCHIVES</h4>
-									<!-- End post title -->
-									<ul>
-										<li><a href="#"><i class="icofont-double-right"></i> January 2015</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i> May 2014</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i> February 2016</a></li>
-									</ul>
-								</div>
-								<!-- End Widget Archives -->
-
 								<!-- 标签分类跳转链接 -->
 								<div class="widget widget-tags">
-									<h4 class="widget-title" v-if="search_list.results.length > 0">标签分类</h4>
+									<h4 class="widget-title" v-if="search_list.results.length > 0">标签云</h4>
                                     <!-- v-for循环中使用下标index -->
 									<ul class="tags-cloud-list" v-for="(ct,index) in category_tag">
                                         <!-- 自定义添加一个标签,因为每次下标都会循环加1,因此指定一个index,
@@ -384,6 +324,17 @@
 										<li><a href="#"><% ct.tag %></a></li>
 									</ul>
 								</div>
+
+								<!-- 最新文章	 -->
+								<div class="widget widget-archives">
+									<h4 class="widget-title">最新文章</h4>
+									<ul>
+										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
+										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+									</ul>
+								</div>
+
 							</aside>
 							<!-- End Widget Area -->
 						</div>
