@@ -6,6 +6,7 @@
         data: {
             host: host,
             article_list: [],  // 文章列表数据
+            lastest_article: [],  // 最新文章数据
             category_tag: [],  // 分类下的所有标签
             paginate_list: [],  // 存储分页相关的数据
             total_page: 0,  // 分页总页数,通过ajax请求获取总页数并修改这个值
@@ -48,6 +49,8 @@
             this.get_article_list();
             // 请求分类下的所有标签数据
             this.get_category_tag();
+            // 请求获取最新的文章数据
+            this.get_lastest_article();
         },
         methods: {
             // 请求文章详情的数据,带上该文章的id值
@@ -59,6 +62,20 @@
                     .then(response => {
                         this.article_list = response.data;
                         this.total_page = response.data.total_page;
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    })
+            },
+            // 请求最新的前3篇文章数据
+            get_lastest_article: function () {
+                axios.get(this.host + '/lastest/', {
+                    responseType: 'json',
+		            'Access-Control-Allow-Credentials':true,
+        	        'Access-Control-Allow-Origin':true
+                })
+                    .then(response => {
+                        this.lastest_article = response.data
                     })
                     .catch(error => {
                         console.log(error.response.data);

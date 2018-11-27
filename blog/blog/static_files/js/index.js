@@ -16,8 +16,8 @@
             get_lastest_article: function () {
                 axios.get(this.host + '/lastest/', {
                     responseType: 'json',
-		    'Access-Control-Allow-Credentials':true,
-        	    'Access-Control-Allow-Origin':true
+		            'Access-Control-Allow-Credentials':true,
+        	        'Access-Control-Allow-Origin':true
                 })
                     .then(response => {
                         this.lastest_article = response.data

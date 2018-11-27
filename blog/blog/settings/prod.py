@@ -36,7 +36,8 @@ DEBUG = False
 
 
 # ------------------------------ 配置允许哪些主机访问后台 ------------------------------ #
-ALLOWED_HOSTS = ['www.linjinquan.com', '127.0.0.1', 'localhost', 'api.blog.com', '172.18.189.7']
+ALLOWED_HOSTS = ['www.linjinquan.com', 'www.quanlovelei.top', '127.0.0.1',
+                 'localhost', 'api.blog.com', '172.18.189.7']
 
 
 # ------------------------------ 配置应用 ------------------------------ #
@@ -329,7 +330,7 @@ MDEDITOR_CONFIGS = {
         'tex': True,  # 支持tex数学公式
         'flow_chart': True,  # 支持FlowChart流程图
         'sequence': True,  # 支持时序图/序列图
-        # 'htmlDecode': True,  # 不知道如何开启html标签识别和解析,开启了也识别不了！
+        'htmlDecode': True,  # 不知道如何开启html标签识别和解析,开启了也识别不了！
     }
 }
 

@@ -236,9 +236,9 @@
                                 <!-- 文章列表 -->
 								<div class="single-news-wrap" v-for="art in article_list.results">
 									<!-- 文章图片 -->
-									<div class="post-thumbnail">	
-										<img src="/static_files/img/post/pst-list-1.jpg" alt="" style="width: 500px;height: 250px;">
-									</div>
+									<!--<div class="post-thumbnail">	-->
+										<!--<img src="/static_files/img/post/pst-list-1.jpg" alt="" style="width: 500px;height: 250px;">-->
+									<!--</div>-->
 									<!-- 文章标题 -->
 									<div class="entry-header"> 
 										<h4 class="entry-title">
@@ -324,9 +324,12 @@
 								<div class="widget widget-archives">
 									<h4 class="widget-title">最新文章</h4>
 									<ul>
-										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+										<li v-for="article in lastest_article">
+											<a :href="'/article/?aid=' + article.id">
+												<i class="icofont-double-right"></i>
+												<% article.title %>
+											</a>
+										</li>
 									</ul>
 								</div>
 
