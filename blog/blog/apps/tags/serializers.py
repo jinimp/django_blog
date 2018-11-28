@@ -2,6 +2,7 @@
 from rest_framework import serializers
 from rest_framework.relations import StringRelatedField
 from articles.models import Article
+from categorys.serializers import CategorySerializer
 from tags.models import CategoryTag
 
 
@@ -11,7 +12,7 @@ class CategoryTagSerializer(serializers.ModelSerializer):
     # PrimaryKeyRelatedField(默认返回外键的id), StringRelatedField(__str__)
     # 使用StringRelatedField字段查询出外键的__str__方法的值
     # 使用序列化器则可以返回对象的全部属性
-    category = StringRelatedField(read_only=True)
+    category = CategorySerializer(read_only=True)
     tag = StringRelatedField(read_only=True)
 
     class Meta:
