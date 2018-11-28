@@ -24,6 +24,15 @@ def oauth_callback(request):
     return render(request, 'oauth_callback.html')
 
 
+def permission_denied(request):
+    """
+    返回403页面模板
+    :param request:
+    :return:
+    """
+    return render(request, '403.html')
+
+
 def page_not_found(request, **kwargs):
     """
     返回404页面模板
@@ -31,6 +40,15 @@ def page_not_found(request, **kwargs):
     :return:
     """
     return render(request, '404.html')
+
+
+def page_error(request, **kwargs):
+    """
+    返回404页面模板
+    :param request:
+    :return:
+    """
+    return render(request, '500.html')
 
 
 class QQAuthURLView(APIView):

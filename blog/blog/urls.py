@@ -36,5 +36,7 @@ if settings.DEBUG:
     # 指定静态文件上传的目录(images, css, javascript, etc.)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# 404页面
+# 自定义403/404/500页面
+handler403 = views.permission_denied
 handler404 = views.page_not_found
+handler500 = views.page_error
