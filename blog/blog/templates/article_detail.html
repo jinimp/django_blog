@@ -266,19 +266,22 @@
 								<div class="widget widget-archives">
 									<h4 class="widget-title">点击排行</h4>
 									<ul>
-										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+										<li v-for="art_click in article_click_rank">
+											<a :href="'/article/?aid=' + art_click.id">
+												<i class="icofont-double-right"></i>
+												<% art_click.title %>
+											</a>
+										</li>
 									</ul>
 								</div>
 								<!-- 最新文章	 -->
 								<div class="widget widget-archives">
 									<h4 class="widget-title">最新文章</h4>
 									<ul>
-										<li v-for="article in lastest_article">
-											<a :href="'/article/?aid=' + article.id">
+										<li v-for="art_lastest in lastest_article">
+											<a :href="'/article/?aid=' + art_lastest.id">
 												<i class="icofont-double-right"></i>
-												<% article.title %>
+												<% art_lastest.title %>
 											</a>
 										</li>
 									</ul>

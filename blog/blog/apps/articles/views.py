@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from articles.models import Article, PageViews
 from articles.serializers import ArticleDetailSerializer, LastestArticleSerializer, ArticleListSerializer, \
-    ArticleIndexSerializer
+    ArticleIndexSerializer, ArticleClickRankSerializer
 from articles.utils import StandardResultsSetPagination
 
 
@@ -78,8 +78,6 @@ class LastestArticleView(ListAPIView):
         for art_obj in query_obj:
             # 评论数
             art_obj.comment_count = art_obj.comment_set.count()
-            # 对文章的创建时间进行格式化
-            art_obj.create_time = art_obj.create_time.strftime('%Y-%m-%d')
 
         # 返回查询集结果
         return query_obj
@@ -181,10 +179,15 @@ class ArticleDetailView(APIView):
         # ---------------- 3.业务处理 ------------------- #
         # 3.1.查询数据库
         query_obj = Article.objects.get(id=aid)
-        # 3.2.给对象加上一个评论的条数这个属性(因为是一个对象,可以为其加上属性,并且在器就可以使用了)
+        # 3.2点击进入文章详情后,文章的浏览次(点击)数+1
+        query_obj.click = F('click') + 1
+        # 保存到
+        query_obj.save()
+
+        # 重新刷新数据库
+        query_obj.refresh_from_db()
+        # 3.3.给对象加上一个评论的条数这个属性(因为是一个对象,可以为其加上属性,并且在器就可以使用了)
         query_obj.comment_count = query_obj.comment_set.count()
-        # 3.3.对文章的创建时间进行格式化
-        query_obj.create_time = query_obj.create_time.strftime('%Y-%m-%d')
 
         # # 3.4用户点击进入文章详情后,文章的浏览次数+1
         # # 如果登录了,才能统计,否则不能统计
@@ -211,7 +214,6 @@ class ArticleDetailView(APIView):
         # 在markdown语法中两个空格加一个换行才是换行，或者两个换行才是一个换行
         # 解决办法：可使用article.content.replace(“\r\n”, ’ \n’）解决,把换行符替换成两个空格 + 换行符,
         # 这样经过markdown转换后才可以转成前端的br标签
-
         query_obj.body = markdown(query_obj.body.replace("\r\n", '  \n'),
                                   extensions=[
                                       'markdown.extensions.extra',  # 支持有些扩展可以手动打开
@@ -219,6 +221,7 @@ class ArticleDetailView(APIView):
                                       'markdown.extensions.tables',  # 表格处理
                                       'markdown.extensions.toc'  # 支持TOC目录
                                   ], safe_mode=True, enable_attributes=False)
+
         # 3.6.序列化
         # 查询返回一篇文章,即一个结果,因此不需要指定many=True
         serializer = ArticleDetailSerializer(query_obj)
@@ -244,3 +247,20 @@ class ArticleSearchViewSet(HaystackViewSet):
     # 指定分页类(不指定会报错,因为HaystackViewSet中要调用)
     pagination_class = StandardResultsSetPagination
 
+
+# ------------------------------------------------------------------- #
+# ------------------------- 文章点击排行功能 -------------------------- #
+# ------------------------------------------------------------------- #
+
+class ArticleClickRankView(ListAPIView):
+    """获取点击排行前3篇文章"""
+
+    # 指定序列化器
+    serializer_class = ArticleClickRankSerializer
+
+    # 重写get_queryset方法,因为ListAPIView继承的GenericAPIView,
+    # 而GenericAPIView会调用get_queryset方法返回一个查询集,
+    # 而这个默认的查询集默认是返回所有的数据,因此不符合我们的要求,所以要重写
+    def get_queryset(self):
+        # 查询出点击排行最多的前3篇文章
+        return Article.objects.filter(is_delete=False).order_by('-click')[:3]

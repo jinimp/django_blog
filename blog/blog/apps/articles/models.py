@@ -12,8 +12,10 @@ class Article(BaseModel):
     # body = RichTextUploadingField(verbose_name='内容')
     body = MDTextField(verbose_name='内容')
     abstract = models.TextField(verbose_name='摘要', blank=True)
-    # 浏览量可通过浏览表计算出来
+    # 浏览量可通过浏览表计算出来（有用户登录的前提下）
     page_view = models.IntegerField(verbose_name='浏览量', default=0)
+    # 文章的点击量（无用户登录的前提下）
+    click = models.IntegerField(verbose_name='点击量', default=0)
     # null = True允许数据库中为空, blank = True允许admin后台中为空
     # 后期不应该设置可以为空的,　应该设置一个设置值(即默认的图片)
     article_image = models.ImageField(verbose_name='文章图片', null=True)

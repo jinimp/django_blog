@@ -12,6 +12,7 @@
             is_active: false,  // class属性的值是否为active,翻页时下标是否亮
             // document.location.search直接获取http://127.0.0.1?article=9后面的整个?article=9
             query_text: document.location.search,  //用户要查询的字符串,结果为?text=''
+            lastest_article: [], // 最新的文章数据
         },
         computed: {
             // 根据总页数生成一个数组
@@ -52,6 +53,8 @@
             this.get_search_list();
             // 请求分类下的所有标签数据
             this.get_category_tag();
+            // 请求获取最新的文章数据
+            this.get_lastest_article();
         },
         methods: {
             // 获取url路径参数
@@ -94,6 +97,18 @@
                 // 获取当前分类id
                 // 将page=x中的x替换为用户点击对应的页数
                 return this.host + '/search/' + this.query_text + '&page=' + page_num + '&size=' + size_num
+            },
+            // 请求最新的前3篇文章数据
+            get_lastest_article: function () {
+                axios.get(this.host + '/lastest/', {
+                    responseType: 'json'
+                })
+                    .then(response => {
+                        this.lastest_article = response.data
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    })
             },
         }
     });

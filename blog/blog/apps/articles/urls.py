@@ -14,6 +14,7 @@ urlpatterns = [
 
     url(r'^search/$', views.search_template),  # 文章标题搜索,返回搜索页面
 
+    url(r'^rank/$', views.ArticleClickRankView.as_view())  # 文章点击排行
 ]
 
 # 搜索视图集

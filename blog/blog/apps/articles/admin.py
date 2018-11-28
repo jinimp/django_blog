@@ -34,7 +34,7 @@ class ArticleAdmin(admin.ModelAdmin):
     # 在文章列表页面显示的字段, 不是详情里面的字段
     # 将show_tags函指定到列表中即可显示多对多字段的结果!!
     list_display = ['title', 'create_time', 'update_time', 'author',
-                    'category', 'show_tags', 'page_view', 'is_delete']
+                    'category', 'show_tags', 'click', 'is_delete']
 
     # 每页显示10条记录
     list_per_page = 10

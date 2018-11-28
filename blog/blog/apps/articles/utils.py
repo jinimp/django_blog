@@ -22,12 +22,12 @@ class StandardResultsSetPagination(PageNumberPagination):
 
     # 默认每页显示多少条
     # page_size_query_param参数定义的变量可以改变每页显示条数
-    page_size = 3
+    page_size = 4
 
     # 最大支持的每页显示的数据条数
     # 虽然page_size_query_param参数定义的变量可以改变每页显示条数
     # 但是max_page_size可以控制最多每页显示的条数
-    max_page_size = 3
+    max_page_size = 5
 
     # 由于标准的返回结果中没有分页后的总页数,因此要重写返回的方法,添加上总页数
     def get_paginated_response(self, data):

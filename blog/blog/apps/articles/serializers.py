@@ -15,10 +15,12 @@ class LastestArticleSerializer(serializers.ModelSerializer):
     # 使用序列化器则可以返回对象的全部属性
     category = StringRelatedField(read_only=True)
     comment_count = serializers.IntegerField(read_only=True)
+    # 格式化时间格式！
+    create_time = serializers.DateTimeField(format='%Y-%m-%d')
 
     class Meta:
         model = Article
-        fields = ('id', 'title', 'abstract', 'page_view', 'article_image',
+        fields = ('id', 'title', 'abstract', 'click', 'article_image',
                   'create_time', 'category', 'comment_count')
 
 
@@ -51,11 +53,14 @@ class ArticleDetailSerializer(serializers.ModelSerializer):
     author = StringRelatedField(read_only=True)
     tags = StringRelatedField(many=True, read_only=True)  # 返回一个列表包括多个结果,　用many=True
     comment_count = serializers.IntegerField(read_only=True)
+    # 格式化时间格式！
+    create_time = serializers.DateTimeField(format='%Y-%m-%d')
+    click = StringRelatedField(read_only=True)
 
     class Meta:
         model = Article
         fields = ('id', 'create_time', 'title', 'body', 'page_view',
-                  'author', 'category', 'tags', 'comment_count')
+                  'author', 'category', 'tags', 'comment_count', 'click')
 
 
 class ArticleIndexSerializer(HaystackSerializer):
@@ -72,3 +77,13 @@ class ArticleIndexSerializer(HaystackSerializer):
         # 1.text为分词后的文本
         # 2.object为类属性中指定的ArticleListSerializer序列化器返回的结果
         fields = ('text', 'object')
+
+
+class ArticleClickRankSerializer(serializers.ModelSerializer):
+    """
+    Article点击排行序列化器
+    """
+
+    class Meta:
+        model = Article
+        fields = ('id', 'title', 'click')

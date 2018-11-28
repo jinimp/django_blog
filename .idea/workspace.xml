@@ -4,18 +4,26 @@
     <list default="true" id="e0fe6718-42f8-4211-805b-b11f1359665d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/.uwsgi..swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0002_auto_20181030_1714.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0003_auto_20181030_1716.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0004_pageviews.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0005_auto_20181030_1924.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0006_categorytag.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0007_auto_20181031_1238.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/settings/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/apps/articles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/apps/users/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/blog/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/settings/prod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/static_files/img/post/post3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/img/post/post3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/static_files/img/post/post4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/img/post/post4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/static_files/js/article_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/js/article_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/static_files/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/static_files/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/static_files/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/blog/templates/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/templates/article_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/templates/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/templates/article_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/blog/templates/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/templates/tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/blog/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/blog/templates/search.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +35,10 @@
     <session id="-1012171429">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -40,36 +49,38 @@
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="conf" value="2" />
           <entry key="css" value="12" />
-          <entry key="html" value="36" />
+          <entry key="html" value="41" />
           <entry key="ico" value="2" />
           <entry key="iml" value="1" />
           <entry key="ini" value="5" />
           <entry key="jpg" value="39" />
-          <entry key="js" value="14" />
+          <entry key="js" value="17" />
           <entry key="log" value="3" />
-          <entry key="md" value="3" />
+          <entry key="md" value="6" />
           <entry key="png" value="9" />
-          <entry key="py" value="43" />
+          <entry key="py" value="63" />
+          <entry key="sql" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="12" />
-          <entry key="HTML" value="36" />
+          <entry key="HTML" value="41" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="50" />
-          <entry key="JavaScript" value="14" />
-          <entry key="Markdown" value="3" />
+          <entry key="JavaScript" value="17" />
+          <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="43" />
+          <entry key="Python" value="63" />
+          <entry key="SQL" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -77,28 +88,104 @@
         <counts>
           <entry key="conf" value="37" />
           <entry key="css" value="61" />
-          <entry key="html" value="319" />
+          <entry key="html" value="368" />
           <entry key="ini" value="367" />
-          <entry key="js" value="146" />
-          <entry key="md" value="397" />
-          <entry key="py" value="433" />
-          <entry key="txt" value="45" />
+          <entry key="js" value="307" />
+          <entry key="md" value="507" />
+          <entry key="py" value="798" />
+          <entry key="txt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="61" />
-          <entry key="HTML" value="319" />
-          <entry key="JavaScript" value="146" />
-          <entry key="Markdown" value="397" />
-          <entry key="PLAIN_TEXT" value="449" />
-          <entry key="Python" value="433" />
+          <entry key="HTML" value="368" />
+          <entry key="JavaScript" value="307" />
+          <entry key="Markdown" value="507" />
+          <entry key="PLAIN_TEXT" value="505" />
+          <entry key="Python" value="798" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog/blog/templates/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-528">
+              <caret line="235" column="104" lean-forward="true" selection-start-line="235" selection-start-column="104" selection-end-line="235" selection-end-column="104" />
+              <folding>
+                <element signature="n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="74" column="57" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/settings/prod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="360" column="37" selection-start-line="360" selection-start-column="37" selection-end-line="360" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/utils/exception.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/utils/models.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="31" selection-start-line="31" selection-end-line="42" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,14 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
-      <find>img</find>
-      <find>red_</find>
-      <find>../static_files/img/404</find>
-      <find>返回</find>
-      <find>index-btn</find>
-      <find>deb</find>
-      <find>logs</find>
       <find>post-thumbnail</find>
       <find>elas</find>
       <find>STATIC</find>
@@ -127,7 +206,6 @@
       <find>mysq</find>
       <find>dev</find>
       <find>显示</find>
-      <find>图片</find>
       <find>图</find>
       <find>lastest</find>
       <find>app</find>
@@ -139,6 +217,15 @@
       <find>post2</find>
       <find>url(&quot;/static_files/img/post/post1.jpg&quot;)</find>
       <find>/img/post/post1.jpg</find>
+      <find>图片</find>
+      <find>www.li</find>
+      <find>点击排行</find>
+      <find>detail</find>
+      <find>laste</find>
+      <find>v-if</find>
+      <find>elast</find>
+      <find>分</find>
+      <find>没有匹配到关于</find>
     </findStrings>
     <replaceStrings>
       <replace>../static_files</replace>
@@ -156,8 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blog/blog/apps/articles/views.py" />
-        <option value="$PROJECT_DIR$/blog/blog/apps/articles/serializers.py" />
         <option value="$PROJECT_DIR$/blog/blog/apps/tags/views.py" />
         <option value="$PROJECT_DIR$/blog/blog/apps/tags/serializers.py" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/js/oauth_callback.js" />
@@ -166,7 +251,6 @@
         <option value="$PROJECT_DIR$/blog/blog.conf" />
         <option value="$PROJECT_DIR$/blog/blog/templates/login.html" />
         <option value="$PROJECT_DIR$/blog/blog/templates/oauth_callback.html" />
-        <option value="$PROJECT_DIR$/blog/blog/templates/index.html" />
         <option value="$PROJECT_DIR$/blog/blog/apps/oauth/urls.py" />
         <option value="$PROJECT_DIR$/blog/blog/apps/oauth/views.py" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/css/404index.css" />
@@ -175,20 +259,26 @@
         <option value="$PROJECT_DIR$/blog/blog/static_files/css/article_style.css" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/css/style.css" />
         <option value="$PROJECT_DIR$/blog/blog/apps/articles/migrations/0008_auto_20181125_1925.py" />
-        <option value="$PROJECT_DIR$/blog/blog/apps/articles/models.py" />
         <option value="$PROJECT_DIR$/blog/manage.py" />
-        <option value="$PROJECT_DIR$/blog/blog/templates/search.html" />
         <option value="$PROJECT_DIR$/blog/blog/settings/prod.py" />
         <option value="$PROJECT_DIR$/blog/blog/templates/tag.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/blog/blog/settings/dev.py" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/js/host.js" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/js/index.js" />
-        <option value="$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js" />
-        <option value="$PROJECT_DIR$/blog/blog/templates/article_detail.html" />
         <option value="$PROJECT_DIR$/blog/blog/templates/article_list.html" />
         <option value="$PROJECT_DIR$/blog/blog/static_files/js/article_list.js" />
+        <option value="$PROJECT_DIR$/blog/blog/apps/articles/urls.py" />
+        <option value="$PROJECT_DIR$/blog/blog/apps/articles/models.py" />
+        <option value="$PROJECT_DIR$/blog/blog/templates/article_detail.html" />
+        <option value="$PROJECT_DIR$/blog/blog/apps/articles/admin.py" />
+        <option value="$PROJECT_DIR$/blog/blog/apps/articles/views.py" />
+        <option value="$PROJECT_DIR$/blog/blog/apps/articles/serializers.py" />
+        <option value="$PROJECT_DIR$/blog/blog/templates/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js" />
         <option value="$PROJECT_DIR$/blog/blog/apps/articles/utils.py" />
+        <option value="$PROJECT_DIR$/blog/blog/templates/search.html" />
+        <option value="$PROJECT_DIR$/blog/blog/static_files/js/search.js" />
       </list>
     </option>
   </component>
@@ -206,22 +296,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="django_blog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="django_blog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,7 +356,23 @@
               <item name="django_blog" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="django_blog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -371,11 +461,26 @@
       <option name="project" value="LOCAL" />
       <updated>1543151951892</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="列表页和详情页 完善展示最新文章/分页功能">
+      <created>1543341202531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543341202534</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改README.md">
+      <created>1543341674617</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543341674617</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-11" width="1867" height="962" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14370933" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,18 +488,37 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32972324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39951864" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.36823106" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.36702767" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14370933" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972324" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39951864" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.36702767" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
@@ -404,115 +528,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加404页面" />
+    <MESSAGE value="列表页和详情页完善展示最新文章/分页功能" />
+    <MESSAGE value="列表页和详情页 完善展示最新文章丶分页功能" />
+    <MESSAGE value="列表页和详情页 完善展示最新文章分页功能" />
+    <MESSAGE value="列表页和详情页 完善展示最新文章/分页功能" />
     <MESSAGE value="修改README.md" />
     <option name="LAST_COMMIT_MESSAGE" value="修改README.md" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog/blog/settings/dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/host.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" selection-start-line="29" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/templates/article_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="262" column="65" selection-start-line="262" selection-start-column="44" selection-end-line="262" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/templates/article_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="281" column="131" selection-start-line="281" selection-start-column="127" selection-end-line="281" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/article_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
-          <folding>
-            <element signature="e#1983#2672#0" />
-            <element signature="e#5268#7991#0" />
-            <element signature="e#8295#8533#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-          <folding>
-            <element signature="e#23#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/about.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/beianbgs.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/breadcumb.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/Cloud_alpha.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/fanfact.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/favicon2.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/post/post8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/post/post9.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/post/post10.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -624,12 +647,130 @@
     <entry file="file://$PROJECT_DIR$/blog/blog/static_files/img/post/post2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/migrations/0002_auto_20181128_1517.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/categorys/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1008" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1125">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/blog/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="462" column="67" lean-forward="true" selection-start-line="462" selection-start-column="67" selection-end-line="462" selection-end-column="67" />
+        <state relative-caret-position="424">
+          <caret line="464" column="118" selection-start-line="464" selection-start-column="118" selection-end-line="464" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="600">
+            <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/settings/prod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="360" column="37" selection-start-line="360" selection-start-column="37" selection-end-line="360" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/utils/exception.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/utils/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="132" column="33" selection-start-line="132" selection-start-column="33" selection-end-line="132" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/apps/articles/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/templates/article_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="276" selection-start-line="276" selection-end-line="287" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/article_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="31" selection-start-line="31" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/static_files/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="74" column="57" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="235" column="104" lean-forward="true" selection-start-line="235" selection-start-column="104" selection-end-line="235" selection-end-column="104" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

@@ -272,7 +272,6 @@
                                             <!-- 使用管道获取出正确的url -->
                                             <a :href="search_list.links.previous | replace_s_to_null">
                                                 <i class="icofont-caret-left"></i>
-{#                                                <i class="icofont-double-left"></i>#}
                                             </a>
                                         </li>
                                         <!-- 循环显示页码 -->
@@ -294,7 +293,7 @@
 									</ul>
 								</div>
 							</div>
-                            <div class="content-area" v-else>
+                            <div id="primary" class="content-area" v-else>
                                 <h4>没有匹配到关于"<% mySearch | string_strap %>"的结果, 请尝试搜索其它关键字...</h4>
                             </div>
 						</div>
@@ -329,9 +328,12 @@
 								<div class="widget widget-archives">
 									<h4 class="widget-title">最新文章</h4>
 									<ul>
-										<li><a href="#"><i class="icofont-double-right"></i>Vue测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>Python测试文章内容</a></li>
-										<li><a href="#"><i class="icofont-double-right"></i>HTML测试文章内容</a></li>
+										<li v-for="art_lastest in lastest_article">
+											<a :href="'/article/?aid=' + art_lastest.id">
+												<i class="icofont-double-right"></i>
+												<% art_lastest.title %>
+											</a>
+										</li>
 									</ul>
 								</div>
 
