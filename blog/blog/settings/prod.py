@@ -36,7 +36,9 @@ DEBUG = False
 
 
 # ------------------------------ 配置允许哪些主机访问后台 ------------------------------ #
-ALLOWED_HOSTS = ['www.linjinquan.com', 'www.quanlovelei.top', '127.0.0.1', 'localhost', 'api.blog.com', '172.18.189.7']
+# 项目上线了之后, 如果想每个人都能访问你的网站的话, 要在allowed_hosts中加上'*'
+ALLOWED_HOSTS = ['*', 'www.linjinquan.com', 'www.quanlovelei.top',
+                 '127.0.0.1', 'localhost', 'api.blog.com', '172.18.189.7']
 
 
 # ------------------------------ 配置应用 ------------------------------ #
