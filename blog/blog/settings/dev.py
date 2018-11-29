@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',  # 文章
     'categorys.apps.CategorysConfig',  # 分类
     'tags.apps.TagsConfig',  # 标签
+    'comments.apps.CommentsConfig',  # 评论
 ]
 
 
@@ -359,3 +360,7 @@ HAYSTACK_CONNECTIONS = {
     # 1.1检查是否能连接elasticsearch: curl -X GET http://192.168.136.132:9200/_cat/indices
     # 1.2如果连接不上,要删除容器,重新创建容器
 # 2.每次启动都要先在终端执行: python manage.py rebuild_index
+
+
+# ------------------- login_required自定义重定向到登录页面 --------------------- #
+LOGIN_URL = '/oauth/login/'

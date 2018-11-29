@@ -186,12 +186,16 @@ Website: www.mushahid.me
  .mb-30{
      margin-bottom: 30px;
 }
+/*
  .mb-40{
      margin-bottom: 40px;
 }
+
  .mb-65{
      margin-bottom: 65px;
 }
+*/
+
 /*Margin Left*/
  .ml-35 {
      margin-left: 35px;
@@ -1481,9 +1485,11 @@ a.more i {
  .author-thumb {
      float: left;
 }
+/*
  .author-text {
      padding-left: 115px;
 }
+*/
  .author-text .author-name {
      font-size: 16px;
      font-weight: 600;
@@ -1508,6 +1514,7 @@ a.more i {
  .comment-form-area > h4 {
      font-size: 18px;
      font-weight: 600;
+     margin-top: 30px;
      margin-bottom: 30px;
      /*text-transform: uppercase;*/
 }

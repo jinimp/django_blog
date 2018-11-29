@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'articles.apps.ArticlesConfig',  # 文章
     'categorys.apps.CategorysConfig',  # 分类
     'tags.apps.TagsConfig',  # 标签
+    'comments.apps.CommentsConfig',  # 评论
 ]
 
 
