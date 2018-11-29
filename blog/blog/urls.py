@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^', include('blog.apps.tags.urls')),  # 标签
     url(r'mdeditor/', include('mdeditor.urls')),  # markdown_editor
     # url(r'^ckeditor/', include('ckeditor_uploader.urls')),  # ckeditor
+    url(r'^', include('blog.apps.comments.urls')),  # 评论
 ]
 
 if settings.DEBUG:

@@ -8,12 +8,16 @@
             article_detail: [],  // 文章详情数据
             lastest_article: [], // 最新的文章数据
             article_click_rank: [],  // 点击排行的文章数据
+            article_comment_list: [],  // 查询所有的评论数据
+            content: '',  // 用户发表的评论内容
+            loggest_content: false,  // 评论内容的长度不符合要求?
         },
         // 页面一加载时, 执行下面的请求, 获取数据
         mounted: function () {
             this.get_article_detail();
             this.get_lastest_article();
             this.get_article_click_rank();
+//            this.get_article_comment();
         },
         methods: {
             // 请求文章详情的数据,带上该文章的id值
@@ -53,6 +57,50 @@
                         console.log(error.response.data);
                     })
             },
+            // 请求加载文章评论数据
+            get_article_comment: function () {
+				axios.get(this.host + '/comments/', {
+                    responseType: 'json'
+                })
+                    .then(response => {
+                        this.article_comment_list = response.data
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    })
+            },
+
+            // 下面的2个函数未完成！！
+            // 验证评论的内容的长度是否符合要求
+//            loggest_content_test: function () {
+//            	var len = this.content.length;
+//                if(len<=255 || len>=5){
+//                    this.loggest_content = false;
+//                } else {
+//                    this.loggest_content = true;
+//                }
+//            }
+            // 请求保存文章评论数据
+//            on_submit: function () {
+//                this.loggest_content_test();
+//
+//                // 验证通过后，发起post请求
+//                if (this.loggest_content == false) {
+//                    axios.post(this.host + '/post_comments/', {
+//                        content: this.content,
+//                        article: this.article_detail.id,
+//                    }, {
+//                        responseType: 'json'
+//                    })
+//                        .then(response => {
+//                            this.content = response.data
+//                        })
+//                        .catch(error => {
+//                            console.log(error.response.data);
+//                        })
+//                }
+//
+//            },
         }
     });
 // }

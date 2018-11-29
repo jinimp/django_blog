@@ -10,8 +10,8 @@ class Comment(models.Model):
     user = models.ForeignKey('users.User', verbose_name='用户')
     article = models.ForeignKey('articles.Article', verbose_name='文章')
     content = models.CharField(max_length=255, verbose_name='评论内容')
-    # 关联父评论的id, 可以为空
-    parent = models.ForeignKey(to='self', null=True, verbose_name='父评论id')
+    # 关联父评论的id, 数据库可以为空, 后台admin也可以为空
+    parent = models.ForeignKey(to='self', null=True, blank=True, verbose_name='父评论id')
     push_time = models.DateTimeField(auto_now_add=True, verbose_name="评论发表的时间")
 
     class Meta:

@@ -1,10 +1,7 @@
 # -*- coding:utf8 -*-
-from drf_haystack.serializers import HaystackSerializer
 from rest_framework import serializers
 from rest_framework.relations import StringRelatedField, PrimaryKeyRelatedField
-from articles.models import Article
-from articles.search_indexes import ArticleIndex
-from categorys.serializers import CategorySerializer
+from comments.models import Comment
 
 
 class ArticleCommentSerializer(serializers.ModelSerializer):
@@ -23,3 +20,40 @@ class ArticleCommentSerializer(serializers.ModelSerializer):
     #     fields = ('id', 'title', 'abstract', 'click', 'article_image',
     #               'create_time', 'category', 'comment_count')
     pass
+
+
+class PostArticleCommentSerializer(serializers.ModelSerializer):
+    """新增评论序列化器"""
+
+    # 父评论id只序列化返回
+    parent = serializers.IntegerField(read_only=True)
+    # 格式化时间格式！(read_only=True:只序列化返回)
+    push_time = serializers.DateTimeField(format='%Y-%m-%d', read_only=True)
+
+    class Meta:
+        model = Comment
+        fields = ('article', 'content', 'parent', 'push_time')
+
+        # 反序列化时对字段进行验证
+        extra_kwargs = {
+            'content': {
+                'min_length': 5,
+                'max_length': 255,
+                'error_messages': {
+                    'min_length': '评论内容最小要输入5个字符！',
+                    'max_length': '评论内容最大输入255个字符！',
+                }
+            },
+        }
+
+        def create(self, validated_data):
+            """
+            创建评论
+            """
+            comment = Comment.objects.create(
+                user=validated_data.get('user'),
+                article=validated_data.get('article'),
+                content=validated_data.get('content'),
+            )
+            return comment
+

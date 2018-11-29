@@ -48,152 +48,139 @@
 
 			<!-- 顶部 -->
 			<header class="header-area primary-header">
+				<!-- 导航栏 -->
+				<div class="navigation-area">
+					<div class="container">
+						<div class="row">
+							<!--logo-->
+							<div class="col-2 col-md-1">
+								<a href="/">
+								 <img src="/static_files/img/favicon_48px.ico" alt="logo" style="margin-top: 9px;">
+								</a>
+							</div>
+							<!--菜单栏-->
+							<div class="col-4 col-md-10 order-two">
+								<div class="main-menu-wrap">
+									<nav class="digitalizer-nav">
+										<ul class="menu">
+											<li><a href="/">首页</a></li>
+											<li class="has-dropdown"><a href="#">技术分享</a>
+											    <ul>
+													<!--R语言-->
+												    <li class="has-dropdown"><a href="about.html">R语言</a>
+														<ul>
+															<li><a href="service-one.html">可视化</a></li>
+															<li><a href="service-two.html">数据处理</a></li>
+															<li><a href="service-two.html">机器学习</a></li>
+														</ul>
+													</li>
+													<!--Python-->
+												    <li class="has-dropdown"><a href="about-2.html">Python</a>
+														<ul>
+															<li><a href="service-one.html">爬虫</a></li>
+															<li><a href="service-one.html">数据处理</a></li>
+															<li><a href="service-one.html">机器学习</a></li>
+														</ul>
+													</li>
+													<!--数据库-->
+												    <li class="has-dropdown"><a href="about-3.html">数据库</a>
+														<ul>
+															<li><a href="service-one.html">MySQL</a></li>
+															<li><a href="service-two.html">SQLServer</a></li>
+															<li><a href="service-three.html">Oracle</a></li>
+															<li><a href="service-three.html">Hive</a></li>
+															<li><a href="service-three.html">Mongodb</a></li>
+															<li><a href="service-three.html">Redis</a></li>
+														</ul>
+													</li>
+													<!--后端-->
+												    <li class="has-dropdown"><a href="about-3.html">后端技术</a>
+														<ul>
+															<li><a href="service-one.html">Flask</a></li>
+															<li><a href="service-two.html">Django</a></li>
+														</ul>
+													</li>
+													<!--前端-->
+													<li class="has-dropdown"><a href="#">前端技术</a>
+														<ul>
+															<li><a href="service-one.html">HTML</a></li>
+															<li><a href="service-two.html">CSS</a></li>
+															<li><a href="service-three.html">JS</a></li>
+														</ul>
+													</li>
+													<li class="has-dropdown"><a href="team.html">Linux</a>
+														<ul>
+															<li><a href="service-one.html">Ubuntu</a></li>
+															<li><a href="service-two.html">Centos</a></li>
+														</ul>
+													</li>
+													<!--云计算-->
+													<li class="has-dropdown"><a href="team-2.html">云计算</a>
+														<ul>
+															<li><a href="service-one.html">Docker</a></li>
+															<li><a href="service-two.html">OpenStack</a></li>
+														</ul>
+													</li>
+												</ul>
+											</li>
 
-					<!-- 导航栏上面 -->
-					<div class="header-middle-area">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="site-branding">
-										<a href="/"><img src="/static_files/img/logo.png" alt="Logo"></a>
-									</div>
+											<li class="has-dropdown"><a href="#">前端开发</a>
+											    <ul><!-- Dropdown Items -->
+												    <li><a href="service-one.html">Service One</a></li>
+												</ul>
+											</li>
+
+											<li class="has-dropdown"><a href="#">后台开发</a>
+												<!-- Start Mega Menu -->
+												<ul class="mega-menu three-column mega-center">
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Accordions</a></li>
+															<li><a href="#">Alarts</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Lists</a></li>
+															<li><a href="#">Image Container</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+													<!-- Start Mega Column -->
+													<li class="mega-col"><span class="title">Mega Menu Title</span>
+														<ul><!-- Mega Menu Items -->
+															<li><a href="#">Social Buttons</a></li>
+															<li><a href="#">Tabs</a></li>
+														</ul>
+													</li>
+													<!-- End Mega Column -->
+												</ul>
+												<!-- End Mega Menu -->
+											</li>
+											<li ><a href="contact.html">关于</a></li>
+										</ul>
+									</nav>
 								</div>
-								<div class="col-md-5">
-									<div class="header-middle-contact">
-										<a href=""><i class="icofont-telephone"></i>123 456 5678</a>
-										<a href="mailto:"><i class="icofont-envelope"></i>123456@qq.com</a>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="quote-middle">
-										<a href="/oauth/login/" class="theme-btn btn-style-order-nav">登录</a>
-									</div>
+								<div class="mobile-menu-area"></div>
+							</div>
+							<!--搜索框-->
+							<div class="col-6 col-md-1 order-one">
+								<div class="header-search">
+									<form role="search" method="get" class="search-form" action="/search/">
+										<label>
+											<input type="search" class="search-field" placeholder="Search …" name="text">
+										</label>
+										<input type="submit" class="search-submit" value="Search">
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- 导航栏 -->
-					<div class="navigation-area">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-md-10 order-two">
-									<!-- Start Digitalizer Nav -->
-									<div class="main-menu-wrap">
-										<nav class="digitalizer-nav">
-											<ul class="menu">
-												<li class="has-dropdown"><a href="/">首页</a>
-													<ul><!-- Dropdown Items -->
-														<li><a href="index.html">Home Version One</a></li>
-														<li><a href="index-2.html">Home Version Two</a></li>
-														<li><a href="index-3.html">Home Version Three</a></li>
-														<li><a href="index-4.html">Home Version Four</a></li>
-														<li><a href="index-5.html">Home Version Five</a></li>
-													</ul>
-												</li>
-												<li class="has-dropdown"><a href="#">技术分享</a>
-													<ul><!-- Dropdown Items -->
-														<li><a href="about.html">About Us One</a></li>
-														<li><a href="about-2.html">About Us Two</a></li>
-														<li><a href="about-3.html">About Us Three</a></li>
-														<li class="has-dropdown"><a href="#">Services</a>
-															<ul><!-- Dropdown Items -->
-																<li><a href="service-one.html">Service Verion One</a> </li>
-																<li><a href="service-two.html">Service Verion Two</a> </li>
-																<li><a href="service-three.html">Service Verion Three</a> </li>
-																<li><a href="service-single.html">Single Service</a> </li>
-															</ul>
-														</li>
-														<li><a href="team.html">Team</a></li>
-														<li><a href="team-2.html">Team Two</a></li>
-														<li><a href="team-single.html">Team Single</a></li>
-														<li><a href="404.html">404 Page</a></li>
-													</ul>
-												</li>
-												<li class="has-dropdown"><a href="#">前端开发</a>
-													<ul><!-- Dropdown Items -->
-														<li><a href="service-one.html">Service One</a></li>
-														<li><a href="service-two.html">Service Two</a></li>
-														<li><a href="service-three.html">Service Three</a></li>
-														<li><a href="service-single.html">Service Single</a></li>
-														<li class="has-dropdown"><a href="#">Project</a>
-															<ul><!-- Dropdown Items -->
-																<li><a href="project-1.html">Project One</a></li>
-																<li><a href="project-2.html">Project Two</a></li>
-																<li><a href="project-3.html">Project Three</a></li>
-																<li><a href="project-single.html">Project Single</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li class="has-dropdown"><a href="#">后台开发</a>
-													<!-- Start Mega Menu -->
-													<ul class="mega-menu three-column mega-center">
-														<!-- Start Mega Column -->
-														<li class="mega-col"><span class="title">Mega Menu Title</span>
-															<ul><!-- Mega Menu Items -->
-																<li><a href="#">Accordions</a></li>
-																<li><a href="#">Alarts</a></li>
-																<li><a href="#">Buttons</a></li>
-																<li><a href="#">Call Action</a></li>
-																<li><a href="#">Google Map</a></li>
-																<li><a href="#">Font Icons</a></li>
-															</ul>
-														</li>
-														<!-- End Mega Column -->
-														<!-- Start Mega Column -->
-														<li class="mega-col"><span class="title">Mega Menu Title</span>
-															<ul><!-- Mega Menu Items -->
-																<li><a href="#">Lists</a></li>
-																<li><a href="#">Image Container</a></li>
-																<li><a href="#">Modals</a></li>
-																<li><a href="#">Panels</a></li>
-																<li><a href="#">Pies Graph</a></li>
-																<li><a href="#">Pricing Tables</a></li>
-															</ul>
-														</li>
-														<!-- End Mega Column -->
-														<!-- Start Mega Column -->
-														<li class="mega-col"><span class="title">Mega Menu Title</span>
-															<ul><!-- Mega Menu Items -->
-																<li><a href="#">Social Buttons</a></li>
-																<li><a href="#">Tabs</a></li>
-																<li><a href="#">Tables</a></li>
-																<li><a href="#">Widgets</a></li>
-																<li><a href="#">Team Members</a></li>
-																<li><a href="#">Typography</a></li>
-															</ul>
-														</li>
-														<!-- End Mega Column -->
-													</ul>
-													<!-- End Mega Menu -->
-												</li>
-												<li ><a href="contact.html">关于</a></li>
-											</ul>
-										</nav>
-									</div>
-									<!-- End Digitalizer Nav -->
-									<!-- Mobile Menu Active here. Don't Remove it -->
-									<div class="mobile-menu-area"></div>
-								</div>
-
-								<div class="col-8 col-md-2 order-one">
-									<!-- Start Header Search -->
-									<div class="header-search">
-										<form role="search" method="get" class="search-form" action="#">
-											<label>
-												<input type="search" class="search-field"
-													   placeholder="Search …" value="" name="s">
-											</label>
-											<input type="submit" class="search-submit" value="Search">
-										</form>
-									</div>
-									<!-- End Header Search -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</header>
+				</div>
+			</header>
 
             <!-- 主要内容 -->
             <!--定义app容器，v-cloak 这个指令是防止页面加载时出现 vuejs 的变量名-->
