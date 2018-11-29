@@ -450,28 +450,99 @@
                     <!-- 最新的3篇文章 -->
 					<div class="row">
                         <!-- v-for应该写在col-lx-x里面,这样才能排版在一行 -->
-						<div class="col-lg-4 col-md-6" v-for="article in lastest_article">
+						<!--<div class="col-lg-4 col-md-6" v-for="article in lastest_article">-->
+							<!--&lt;!&ndash; Start single post block &ndash;&gt;-->
+							<!--<div class="single-post-block bg-white">-->
+                                <!--&lt;!&ndash; target="_blank"打开新的窗口 &ndash;&gt;-->
+                                <!--&lt;!&ndash; 前后端分离用下面的链接 &ndash;&gt;-->
+								<!--&lt;!&ndash; <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> &ndash;&gt;-->
+								<!--&lt;!&ndash; 前后端不分离用下面的链接,因为有模板 &ndash;&gt;-->
+                                <!--<a :href="'/article/?aid=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>-->
+								<!--<div class="post-block-content">-->
+									<!--<span class="post-block-date"><% article.create_time %></span>-->
+									<!--<h5><a :href="'/article/?aid=' + article.id" target="_blank"  style="text-align:center"><% article.title %></a></h5>-->
+									<!--<span class="post-block-author"><i class="icofont-ui-folder"></i><% article.category %></span>-->
+									<!--<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% article.click %>）</span>-->
+									<!--<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% article.comment_count %>）</span>-->
+									<!--<div class="post-block-excerpt" style="height: 43px;"><% article.abstract %></div>-->
+									<!--<a class="more" :href="'/article/?aid=' + article.id" target="_blank">-->
+										<!--Read more <i class="icofont-caret-right"></i>-->
+									<!--</a>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--&lt;!&ndash; End single post block &ndash;&gt;-->
+						<!--</div>-->
+
+                        <!-- v-for应该写在col-lx-x里面,这样才能排版在一行 -->
+						<div class="col-lg-4 col-md-6">
 							<!-- Start single post block -->
 							<div class="single-post-block bg-white">
                                 <!-- target="_blank"打开新的窗口 -->
                                 <!-- 前后端分离用下面的链接 -->
 								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
 								<!-- 前后端不分离用下面的链接,因为有模板 -->
-                                <a :href="'/article/?aid=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>
+                                <a :href="'/article/?aid=' + lastest_article[0].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>
 								<div class="post-block-content">
-									<span class="post-block-date"><% article.create_time %></span>
-									<h5><a :href="'/article/?aid=' + article.id" target="_blank"  style="text-align:center"><% article.title %></a></h5>
-									<span class="post-block-author"><i class="icofont-ui-folder"></i><% article.category %></span>
-									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% article.click %>）</span>
-									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% article.comment_count %>）</span>
-									<div class="post-block-excerpt" style="height: 43px;"><% article.abstract %></div>
-									<a class="more" :href="'/article/?aid=' + article.id" target="_blank">
+									<span class="post-block-date"><% lastest_article[0].create_time %></span>
+									<h5><a :href="'/article/?aid=' + lastest_article[0].id" target="_blank"  style="text-align:center"><% lastest_article[0].title %></a></h5>
+									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[0].category %></span>
+									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[0].click %>）</span>
+									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[0].comment_count %>）</span>
+									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[0].abstract %></div>
+									<a class="more" :href="'/article/?aid=' + lastest_article[0].id" target="_blank">
 										Read more <i class="icofont-caret-right"></i>
 									</a>
 								</div>
 							</div>
 							<!-- End single post block -->
 						</div>
+                        <!-- v-for应该写在col-lx-x里面,这样才能排版在一行 -->
+						<div class="col-lg-4 col-md-6">
+							<!-- Start single post block -->
+							<div class="single-post-block bg-white">
+                                <!-- target="_blank"打开新的窗口 -->
+                                <!-- 前后端分离用下面的链接 -->
+								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
+								<!-- 前后端不分离用下面的链接,因为有模板 -->
+                                <a :href="'/article/?aid=' + lastest_article[1].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post3.jpg);"></a>
+								<div class="post-block-content">
+									<span class="post-block-date"><% lastest_article[1].create_time %></span>
+									<h5><a :href="'/article/?aid=' + lastest_article[1].id" target="_blank"  style="text-align:center"><% lastest_article[1].title %></a></h5>
+									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[1].category %></span>
+									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[1].click %>）</span>
+									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[1].comment_count %>）</span>
+									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[1].abstract %></div>
+									<a class="more" :href="'/article/?aid=' + lastest_article[1].id" target="_blank">
+										Read more <i class="icofont-caret-right"></i>
+									</a>
+								</div>
+							</div>
+							<!-- End single post block -->
+						</div>
+                        <!-- v-for应该写在col-lx-x里面,这样才能排版在一行 -->
+						<div class="col-lg-4 col-md-6">
+							<!-- Start single post block -->
+							<div class="single-post-block bg-white">
+                                <!-- target="_blank"打开新的窗口 -->
+                                <!-- 前后端分离用下面的链接 -->
+								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
+								<!-- 前后端不分离用下面的链接,因为有模板 -->
+                                <a :href="'/article/?aid=' + lastest_article[2].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post4.jpg);"></a>
+								<div class="post-block-content">
+									<span class="post-block-date"><% lastest_article[2].create_time %></span>
+									<h5><a :href="'/article/?aid=' + lastest_article[2].id" target="_blank"  style="text-align:center"><% lastest_article[2].title %></a></h5>
+									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[2].category %></span>
+									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[2].click %>）</span>
+									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[2].comment_count %>）</span>
+									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[2].abstract %></div>
+									<a class="more" :href="'/article/?aid=' + lastest_article[2].id" target="_blank">
+										Read more <i class="icofont-caret-right"></i>
+									</a>
+								</div>
+							</div>
+							<!-- End single post block -->
+						</div>
+
 					</div>
 				</div>
 			</div>
