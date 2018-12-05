@@ -28,6 +28,12 @@
                 })
                     .then(response => {
                         this.article_detail = response.data;
+                        // 执行完之后,因为页面还没渲染完,因此没有效果!怎么处理??
+                        // 添加定时效果, 等页面渲染完成之后, 再对table标签添加class属性
+                        // 添加bootstrap的table样式即可以完成响应式!!
+                        setTimeout(function () {
+                            $("table").attr("class", "table table-hover table-bordered");
+                        }, 1000)
                     })
                     .catch(error => {
                         console.log(error.response.data);
