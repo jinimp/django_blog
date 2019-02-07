@@ -17,7 +17,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     # fieldsets可以对字段分块, 看起来比较整洁, 层次分明
     fieldsets = (
-        ("基本信息", {'fields': ['author', 'article_image', 'category', 'tags']}),
+        ("基本信息", {'fields': ['author', 'category', 'tags']}),
         ("文章内容", {'fields': ['title', 'abstract', 'body']}),
         ("其它信息", {'fields': ['create_time', 'update_time', 'page_view', 'is_delete']})
     )

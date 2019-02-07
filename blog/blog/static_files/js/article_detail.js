@@ -33,7 +33,7 @@
                         // 添加bootstrap的table样式即可以完成响应式!!
                         setTimeout(function () {
                             $("table").attr("class", "table table-hover table-bordered");
-                        }, 1000)
+                        }, 200)
                     })
                     .catch(error => {
                         console.log(error.response.data);

@@ -250,7 +250,7 @@
                                         <i class="icofont-double-right"></i>
                                     </li>
                                     <li>
-                                        <a :href="'/article_list/?cid=' + article_detail.category.id"><% article_detail.category.name + '文章列表'%></a>
+                                        <a :href="'/api/v1/article_list/?cid=' + article_detail.category.id"><% article_detail.category.name + '文章列表'%></a>
                                         <i class="icofont-double-right"></i>
                                     </li>
                                     <li><% article_detail.title %></li>
@@ -301,7 +301,7 @@
                                         <h4 class="widget-title">点击排行</h4>
                                         <ul>
                                             <li v-for="art_click in article_click_rank">
-                                                <a :href="'/article/?aid=' + art_click.id">
+                                                <a :href="'/api/v1/article/?aid=' + art_click.id">
                                                     <i class="icofont-double-right"></i>
                                                     <% art_click.title %>
                                                 </a>
@@ -313,7 +313,7 @@
                                         <h4 class="widget-title">最新文章</h4>
                                         <ul>
                                             <li v-for="art_lastest in lastest_article">
-                                                <a :href="'/article/?aid=' + art_lastest.id">
+                                                <a :href="'/api/v1/article/?aid=' + art_lastest.id">
                                                     <i class="icofont-double-right"></i>
                                                     <% art_lastest.title %>
                                                 </a>

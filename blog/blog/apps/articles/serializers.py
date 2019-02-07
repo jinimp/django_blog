@@ -20,7 +20,7 @@ class LastestArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Article
-        fields = ('id', 'title', 'abstract', 'click', 'article_image',
+        fields = ('id', 'title', 'abstract', 'click',
                   'create_time', 'category', 'comment_count')
 
 
@@ -40,7 +40,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = ('id', 'author', 'title', 'abstract', 'tags',
-                  'create_time', 'category_id', 'article_image')
+                  'create_time', 'category_id')
 
 
 class ArticleDetailSerializer(serializers.ModelSerializer):

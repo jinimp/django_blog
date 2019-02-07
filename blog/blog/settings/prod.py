@@ -203,7 +203,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # 系统后台自带/第三方模块的静态文件存放的位置
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_files/sys_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files/frontend_static')
 
 # ------------------------------ 配置日志 ------------------------------ #
 LOGGING = {

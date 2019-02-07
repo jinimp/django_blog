@@ -2,7 +2,9 @@ from django.db.models import Count, F
 from django.shortcuts import render
 from drf_haystack.viewsets import HaystackViewSet
 from markdown import markdown
-from rest_framework.filters import OrderingFilter
+from django_filters import FilterSet, CharFilter
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -123,6 +125,17 @@ class LastestArticleView(ListAPIView):
 #         return Response(serializer.data)
 #
 
+class TitleFilter(FilterSet):
+    """搜索类"""
+
+    title = CharFilter(lookup_expr='icontains')  # 模糊查询（包含），并且忽略大小写
+    # title = CharFilter(lookup_expr='iexact')  # 精确匹配
+
+    class Meta:
+        model = Article
+        fields = ['title']
+
+
 # --- 方法2: --- #
 class ArticleListView(ListAPIView):
     """获取文章列表页数据"""
@@ -132,14 +145,14 @@ class ArticleListView(ListAPIView):
     # 分页控制
     pagination_class = StandardResultsSetPagination
 
-    # 排序处理
-    # 排序的过滤器
-    filter_backends = [OrderingFilter]
-
-    # 指定可以根据哪此字段进行排序
-    # ordering_fields = ('title', )
-    # 指定按哪个字段进行排序
-    ordering = ('-create_time',)
+    # OrderingFilter：指定排序的过滤器,可以按任意字段排序,通过在路由中通过ordering参数控制,如：?ordering=id
+    # DjangoFilterBackend对应filter_fields属性，做相等查询
+    # SearchFilter对应search_fields，对应模糊查询
+    filter_backends = [OrderingFilter, DjangoFilterBackend, SearchFilter]
+    # 默认指定按哪个字段进行排序
+    ordering_fields = ('-create_time',)
+    # 指定可以被搜索字段
+    filter_class = TitleFilter
 
     def get_queryset(self):
         # ---------------- 1.获取参数 ------------------- #
@@ -236,16 +249,35 @@ class ArticleDetailView(APIView):
 
 # bug:没有解决当用户输入为空时，出现的bug！！！！！！！！！！！！！！！
 
-class ArticleSearchViewSet(HaystackViewSet):
-    """
-    Article搜索视图集
-    """
-    # 指定在搜索的时候使用哪个模型类
-    index_models = [Article]
-    # 结果返回时指定的序列化器
-    serializer_class = ArticleIndexSerializer
-    # 指定分页类(不指定会报错,因为HaystackViewSet中要调用)
+# class ArticleSearchViewSet(HaystackViewSet):
+#     """
+#     Article搜索视图集
+#     """
+#     # 指定在搜索的时候使用哪个模型类
+#     index_models = [Article]
+#     # 结果返回时指定的序列化器
+#     serializer_class = ArticleIndexSerializer
+#     # 指定分页类(不指定会报错,因为HaystackViewSet中要调用)
+#     pagination_class = StandardResultsSetPagination
+
+
+class ArticleSearchView(ListAPIView):
+
+    queryset = Article.objects.filter(is_delete=False)
+    # 序列化器
+    serializer_class = ArticleListSerializer
+
+    # 分页控制
     pagination_class = StandardResultsSetPagination
+
+    # OrderingFilter：指定排序的过滤器,可以按任意字段排序,通过在路由中通过ordering参数控制,如：?ordering=id
+    # DjangoFilterBackend对应filter_fields属性，做相等查询
+    # SearchFilter对应search_fields，对应模糊查询
+    filter_backends = [OrderingFilter, DjangoFilterBackend, SearchFilter]
+    # 默认指定按哪个字段进行排序
+    ordering_fields = ('-create_time',)
+    # 指定可以被搜索字段
+    filter_class = TitleFilter
 
 
 # ------------------------------------------------------------------- #
