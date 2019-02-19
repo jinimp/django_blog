@@ -186,9 +186,9 @@
 							<!--搜索框-->
 							<div class="col-6 col-md-1 order-one">
 								<div class="header-search">
-									<form role="search" method="get" class="search-form" action="/search/">
+									<form role="search" method="get" class="search-form" action="/api/v1/searchs/">
 										<label>
-											<input type="search" class="search-field" placeholder="Search …" name="text">
+											<input type="search" class="search-field" placeholder="Search …" name="title">
 										</label>
 										<input type="submit" class="search-submit" value="Search">
 									</form>
@@ -494,15 +494,15 @@
                                 <!-- 前后端分离用下面的链接 -->
 								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
 								<!-- 前后端不分离用下面的链接,因为有模板 -->
-                                <a :href="'/article/?aid=' + lastest_article[0].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>
+                                <a :href="'/api/v1/article/?aid=' + lastest_article[0].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a>
 								<div class="post-block-content">
 									<span class="post-block-date"><% lastest_article[0].create_time %></span>
-									<h5><a :href="'/article/?aid=' + lastest_article[0].id" target="_blank"  style="text-align:center"><% lastest_article[0].title %></a></h5>
+									<h5><a :href="'/api/v1/article/?aid=' + lastest_article[0].id" target="_blank"  style="text-align:center"><% lastest_article[0].title %></a></h5>
 									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[0].category %></span>
 									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[0].click %>）</span>
 									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[0].comment_count %>）</span>
 									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[0].abstract %></div>
-									<a class="more" :href="'/article/?aid=' + lastest_article[0].id" target="_blank">
+									<a class="more" :href="'/api/v1/article/?aid=' + lastest_article[0].id" target="_blank">
 										Read more <i class="icofont-caret-right"></i>
 									</a>
 								</div>
@@ -517,15 +517,15 @@
                                 <!-- 前后端分离用下面的链接 -->
 								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
 								<!-- 前后端不分离用下面的链接,因为有模板 -->
-                                <a :href="'/article/?aid=' + lastest_article[1].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post3.jpg);"></a>
+                                <a :href="'/api/v1/article/?aid=' + lastest_article[1].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post3.jpg);"></a>
 								<div class="post-block-content">
 									<span class="post-block-date"><% lastest_article[1].create_time %></span>
-									<h5><a :href="'/article/?aid=' + lastest_article[1].id" target="_blank"  style="text-align:center"><% lastest_article[1].title %></a></h5>
+									<h5><a :href="'/api/v1/article/?aid=' + lastest_article[1].id" target="_blank"  style="text-align:center"><% lastest_article[1].title %></a></h5>
 									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[1].category %></span>
 									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[1].click %>）</span>
 									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[1].comment_count %>）</span>
 									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[1].abstract %></div>
-									<a class="more" :href="'/article/?aid=' + lastest_article[1].id" target="_blank">
+									<a class="more" :href="'/api/v1/article/?aid=' + lastest_article[1].id" target="_blank">
 										Read more <i class="icofont-caret-right"></i>
 									</a>
 								</div>
@@ -540,15 +540,15 @@
                                 <!-- 前后端分离用下面的链接 -->
 								<!-- <a :href="'article.html?article_id=' + article.id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post1.jpg);"></a> -->
 								<!-- 前后端不分离用下面的链接,因为有模板 -->
-                                <a :href="'/article/?aid=' + lastest_article[2].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post4.jpg);"></a>
+                                <a :href="'/api/v1/article/?aid=' + lastest_article[2].id" target="_blank" class="sin-post-link" style="background:url(/static_files/img/post/post4.jpg);"></a>
 								<div class="post-block-content">
 									<span class="post-block-date"><% lastest_article[2].create_time %></span>
-									<h5><a :href="'/article/?aid=' + lastest_article[2].id" target="_blank"  style="text-align:center"><% lastest_article[2].title %></a></h5>
+									<h5><a :href="'/api/v1/article/?aid=' + lastest_article[2].id" target="_blank"  style="text-align:center"><% lastest_article[2].title %></a></h5>
 									<span class="post-block-author"><i class="icofont-ui-folder"></i><% lastest_article[2].category %></span>
 									<span class="post-block-author"><i class="icofont-eye-alt"></i>浏览（<% lastest_article[2].click %>）</span>
 									<span class="post-block-comments"><i class="icofont-comment"></i>评论（<% lastest_article[2].comment_count %>）</span>
 									<div class="post-block-excerpt" style="height: 43px;"><% lastest_article[2].abstract %></div>
-									<a class="more" :href="'/article/?aid=' + lastest_article[2].id" target="_blank">
+									<a class="more" :href="'/api/v1/article/?aid=' + lastest_article[2].id" target="_blank">
 										Read more <i class="icofont-caret-right"></i>
 									</a>
 								</div>

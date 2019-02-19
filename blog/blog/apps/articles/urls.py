@@ -13,11 +13,8 @@ urlpatterns = [
     url(r'^lastest/$', views.LastestArticleView.as_view()),  # 查询最新发表的前三篇文章
 
     url(r'^search/$', views.search_template),  # 文章标题搜索,返回搜索页面
+    url(r'^searchs/$', views.ArticleSearchView.as_view()),  # 文章标题搜索功能
 
     url(r'^rank/$', views.ArticleClickRankView.as_view()),  # 文章点击排行
 ]
 
-# 搜索视图集
-router = DefaultRouter()
-router.register('articles/search', views.ArticleSearchViewSet, base_name='articles_search')
-urlpatterns += router.urls

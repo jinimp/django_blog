@@ -172,9 +172,9 @@
 							<!--搜索框-->
 							<div class="col-6 col-md-1 order-one">
 								<div class="header-search">
-									<form role="search" method="get" class="search-form" action="/search/">
+									<form role="search" method="get" class="search-form" action="/api/v1/searchs/">
 										<label>
-											<input type="search" class="search-field" placeholder="Search …" name="text">
+											<input type="search" class="search-field" placeholder="Search …" name="title">
 										</label>
 										<input type="submit" class="search-submit" value="Search">
 									</form>
@@ -238,7 +238,7 @@
 										<!-- 文章标题 -->
 										<div class="entry-header">
 											<h4 class="entry-title">
-												<a :href="'/article/?aid=' + art.id"><% art.title %></a>
+												<a :href="'/api/v1/article/?aid=' + art.id"><% art.title %></a>
 											</h4>
 										</div>
 										<!-- 文章的基本信息 -->
@@ -295,10 +295,10 @@
 								<aside id="secondary" class="widget-area">
 									<h4 class="widget-title">搜索文章标题</h4>
 									<div class="widget widget-search">
-										<form method="get" action="/search/">
+										<form method="get" action="/api/v1/searchs/">
 											<div class="search-form">
 												<!-- input标签中的name属性值,会在form表单提交时自动带上输入框中的值 -->
-												<input class="search-field" placeholder="Search..." name="text" type="text">
+												<input class="search-field" placeholder="Search..." name="title" type="text">
 												<button type="submit"><i class="icofont-search"></i></button>
 											</div>
 										</form>
@@ -311,8 +311,8 @@
 										<ul class="tags-cloud-list" v-for="(ct,index) in category_tag">
 											<!-- 自定义添加一个标签,因为每次下标都会循环加1,因此指定一个index,
 											该标签只会执行一次, 配合v-if从而达到在循环中显示一次标签的效果! -->
-											<li v-if="index == 0"><a :href="'/article_list/?cid=' + article_tag.results[0].category_id">ALL</a></li>
-											<li><a :href="'/tag/?cid=' + article_tag.results[0].category_id + '&tid=' + ct.tag_id"
+											<li v-if="index == 0"><a :href="'/api/v1/article_list/?cid=' + article_tag.results[0].category_id">ALL</a></li>
+											<li><a :href="'/api/v1/tag/?cid=' + article_tag.results[0].category_id + '&tid=' + ct.tag_id"
 												   :style="ct.tag_id == search_tag_id ? 'background-color: #01a0b5' : ''">
 												<% ct.tag %>
 											</a></li>

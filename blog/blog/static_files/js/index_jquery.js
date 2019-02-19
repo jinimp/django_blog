@@ -13,7 +13,7 @@ $(function () {
 
                 if (i == 0) {
                     // 给属性赋值
-                    $('.c1 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c1 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c1 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c1 h3').html(category.name) // 分类名
@@ -21,7 +21,7 @@ $(function () {
                 }
                 if (i == 1) {
                     // 给属性赋值
-                    $('.c2 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c2 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c2 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c2 h3').html(category.name) // 分类名
@@ -29,7 +29,7 @@ $(function () {
                 }
                 if (i == 2) {
                     // 给属性赋值
-                    $('.c3 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c3 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c3 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c3 h3').html(category.name) // 分类名
@@ -37,7 +37,7 @@ $(function () {
                 }
                 if (i == 3) {
                     // 给属性赋值
-                    $('.c4 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c4 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c4 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c4 h3').html(category.name) // 分类名
@@ -45,7 +45,7 @@ $(function () {
                 }
                 if (i == 4) {
                     // 给属性赋值
-                    $('.c5 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c5 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c5 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c5 h3').html(category.name) // 分类名
@@ -53,7 +53,7 @@ $(function () {
                 }
                 if (i == 5) {
                     // 给属性赋值
-                    $('.c6 a').attr('href', '/article_list/?cid=' + category.id)  // 文章跳转链接
+                    $('.c6 a').attr('href', '/api/v1/article_list/?cid=' + category.id)  // 文章跳转链接
                     $('.c6 a > img').attr('src', category.category_image)  // 图片链接
                     // 给内容赋值
                     $('.c6 h3').html(category.name) // 分类名

@@ -21,16 +21,16 @@ from django.conf import settings
 from oauth import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),  # 后台管理员
-    url(r'^', include('blog.apps.users.urls')),  # 用户
-    url(r'^', include('blog.apps.oauth.urls')),  # qq登录回调地址
-    url(r'^oauth/', include('blog.apps.oauth.urls')),  # qq登录
-    url(r'^', include('blog.apps.articles.urls')),  # 文章
-    url(r'^', include('blog.apps.categorys.urls')),  # 分类
-    url(r'^', include('blog.apps.tags.urls')),  # 标签
-    url(r'mdeditor/', include('mdeditor.urls')),  # markdown_editor
+    url(r'^api/v1/admin/', admin.site.urls),  # 后台管理员
+    url(r'^api/v1/', include('blog.apps.users.urls')),  # 用户
+    # url(r'^api/v1/', include('blog.apps.oauth.urls')),  # qq登录回调地址
+    # url(r'^api/v1/oauth/', include('blog.apps.oauth.urls')),  # qq登录
+    url(r'^api/v1/', include('blog.apps.articles.urls')),  # 文章
+    url(r'^api/v1/', include('blog.apps.categorys.urls')),  # 分类
+    url(r'^api/v1/', include('blog.apps.tags.urls')),  # 标签
+    url(r'api/v1/mdeditor/', include('mdeditor.urls')),  # markdown_editor
     # url(r'^ckeditor/', include('ckeditor_uploader.urls')),  # ckeditor
-    url(r'^', include('blog.apps.comments.urls')),  # 评论
+    url(r'^api/v1/', include('blog.apps.comments.urls')),  # 评论
 ]
 
 if settings.DEBUG:

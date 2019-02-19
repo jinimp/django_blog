@@ -18,7 +18,7 @@ class Article(BaseModel):
     click = models.IntegerField(verbose_name='点击量', default=0)
     # null = True允许数据库中为空, blank = True允许admin后台中为空
     # 后期不应该设置可以为空的,　应该设置一个设置值(即默认的图片)
-    article_image = models.ImageField(verbose_name='文章图片', null=True)
+    # article_image = models.ImageField(verbose_name='文章图片', null=True)
     # 外键
     author = models.ForeignKey('users.User', on_delete=models.PROTECT,
                                related_name='author_article', verbose_name='作者')
