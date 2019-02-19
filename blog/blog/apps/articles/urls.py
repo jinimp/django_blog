@@ -17,4 +17,3 @@ urlpatterns = [
 
     url(r'^rank/$', views.ArticleClickRankView.as_view()),  # 文章点击排行
 ]
-
