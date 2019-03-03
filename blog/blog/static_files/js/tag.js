@@ -7,8 +7,10 @@
             host: host,
             article_tag: [],  // 文章标签列表数据
             category_tag: [],  // 分类下的所有标签
+            lastest_article: [],  // 最新文章数据
             paginate_list: [],  // 存储分页相关的数据
             total_page: 0,  // 分页总页数,通过ajax请求获取总页数并修改这个值
+            query_text: document.location.search,  //用户要查询的字符串,结果为?text=''
             is_active: false,
         },
         computed: {
@@ -30,7 +32,7 @@
             },
             //获取用户想要搜索的标签(从查询字符串中提取)
             search_tag_id: function () {
-                return this.get_query_string('tid')
+                return decodeURI(this.query_text.charAt(this.query_text.length-1))
             }
         },
         //自定义过滤器
@@ -52,17 +54,10 @@
             this.get_article_list();
             // 请求分类下的所有标签数据
             this.get_category_tag();
+            // 请求获取最新的文章数据
+            this.get_lastest_article();
         },
         methods: {
-            // 获取url路径参数
-            get_query_string: function(name){
-                var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-                var r = window.location.search.substr(1).match(reg);
-                if (r != null) {
-                    return decodeURI(r[2]);
-                }
-                return null;
-            },
             // 请求文章详情的数据,带上该文章的id值
             get_article_list: function () {
                 // document.location.search直接获取http://127.0.0.1?article=9后面的整个?article=9
@@ -85,6 +80,20 @@
                 })
                     .then(response => {
                         this.category_tag = response.data
+                    })
+                    .catch(error => {
+                        console.log( error.response.data);
+                    })
+            },
+            // 请求最新的前3篇文章数据
+            get_lastest_article: function () {
+                axios.get(this.host + '/lastest/', {
+                    responseType: 'json',
+		            'Access-Control-Allow-Credentials':true,
+        	        'Access-Control-Allow-Origin':true
+                })
+                    .then(response => {
+                        this.lastest_article = response.data
                     })
                     .catch(error => {
                         console.log(error.response.data);

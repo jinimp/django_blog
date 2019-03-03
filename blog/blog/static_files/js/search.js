@@ -27,7 +27,7 @@
             },
             // 获取url路径参数
             mySearch: function () {
-                return this.get_query_string('text')
+                return decodeURI(this.query_text.replace('?title=', ''))
             }
         },
         //自定义过滤器
@@ -41,10 +41,6 @@
                     return link
                 }
             },
-            // 去除用户输入的查询关键字中的所有的空格
-            string_strap: function (str) {
-                return str.replace(/\s/g,"")
-            }
 
         },
         // 页面一加载时, 执行下面的请求, 获取数据
@@ -57,18 +53,9 @@
             this.get_lastest_article();
         },
         methods: {
-            // 获取url路径参数
-            get_query_string: function(name){
-                var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-                var r = window.location.search.substr(1).match(reg);
-                if (r != null) {
-                    return decodeURI(r[2]);
-                }
-                return null;
-            },
             // 请求文章详情的数据,带上该文章的id值
             get_search_list: function () {
-                axios.get(this.host + '/articles/search/' + this.query_text, {
+                axios.get(this.host + '/searchs/' + this.query_text, {
                     responseType: 'json'
                 })
                     .then(response => {
@@ -76,7 +63,7 @@
                         this.total_page = response.data.total_page;
                     })
                     .catch(error => {
-                        console.log(error.response.data);
+                        console.log(error.data);
                     })
             },
             // 请求分类下的所有标签数据,带上该分类的id值
@@ -89,7 +76,7 @@
                         this.category_tag = response.data
                     })
                     .catch(error => {
-                        console.log(error.response.data);
+                        console.log(error.data);
                     })
             },
             // 获取用户任意点击指定的url链接
@@ -107,7 +94,7 @@
                         this.lastest_article = response.data
                     })
                     .catch(error => {
-                        console.log(error.response.data);
+                        console.log(error.data);
                     })
             },
         }
