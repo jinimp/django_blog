@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
 Django settings for blog project.
 
@@ -127,7 +129,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',  # 数据库主机
+        # 'HOST': '127.0.0.1',  # 数据库主机
+        'HOST': '120.79.166.160',  # 数据库主机
         'PORT': 3306,  # 数据库端口
         'USER': 'root',  # 数据库用户名
         'PASSWORD': 'mysql_pw_3',  # 数据库用户密码

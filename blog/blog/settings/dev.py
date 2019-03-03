@@ -32,7 +32,7 @@ SECRET_KEY = 'pg=x^84dz-f3)$h@=j9wdiow12!*qg*m6#nig2l45n^gcf=7j9'
 
 # ------------------------------ 配置debug ------------------------------ #
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 # ------------------------------ 配置允许哪些主机访问后台 ------------------------------ #
