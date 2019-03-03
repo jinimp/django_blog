@@ -150,7 +150,7 @@ class ArticleListView(ListAPIView):
     # SearchFilter对应search_fields，对应模糊查询
     filter_backends = [OrderingFilter, DjangoFilterBackend, SearchFilter]
     # 默认指定按哪个字段进行排序
-    ordering_fields = ('-create_time',)
+    ordering = ('-create_time',)
     # 指定可以被搜索字段
     filter_class = TitleFilter
 
@@ -275,7 +275,7 @@ class ArticleSearchView(ListAPIView):
     # SearchFilter对应search_fields，对应模糊查询
     filter_backends = [OrderingFilter, DjangoFilterBackend, SearchFilter]
     # 默认指定按哪个字段进行排序
-    ordering_fields = ('-create_time',)
+    ordering = ('-create_time',)
     # 指定可以被搜索字段
     filter_class = TitleFilter
 
