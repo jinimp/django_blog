@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>文章列表</title>
 		<!-- 网站Logo -->
-        <link rel="shortcut icon" href="/static_files/img/favicon.ico" >
+        <link rel="shortcut icon" href="/static_files/images/favicon.ico" >
 		<!-- css加载 -->
         <link rel="stylesheet" href="/static_files/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/static_files/css/theme-plugins.css">
@@ -55,7 +55,7 @@
 							<!--logo-->
 							<div class="col-2 col-md-1">
 								<a href="/">
-								 <img src="/static_files/img/favicon_48px.ico" alt="logo" style="margin-top: 9px;">
+								 <img src="/static_files/images/favicon_48px.ico" alt="logo" style="margin-top: 9px;">
 								</a>
 							</div>
 							<!--菜单栏-->
@@ -124,40 +124,40 @@
 												</ul>
 											</li>
 
-											<li class="has-dropdown"><a href="#">前端开发</a>
-											    <ul><!-- Dropdown Items -->
-												    <li><a href="service-one.html">Service One</a></li>
-												</ul>
+											<li><a href="#">前端开发</a>
+											    <!--<ul>&lt;!&ndash; Dropdown Items &ndash;&gt;-->
+												    <!--<li><a href="service-one.html">Service One</a></li>-->
+												<!--</ul>-->
 											</li>
 
-											<li class="has-dropdown"><a href="#">后台开发</a>
+											<li><a href="#">后台开发</a>
 												<!-- Start Mega Menu -->
-												<ul class="mega-menu three-column mega-center">
-													<!-- Start Mega Column -->
-													<li class="mega-col"><span class="title">Mega Menu Title</span>
-														<ul><!-- Mega Menu Items -->
-															<li><a href="#">Accordions</a></li>
-															<li><a href="#">Alarts</a></li>
-														</ul>
-													</li>
-													<!-- End Mega Column -->
-													<!-- Start Mega Column -->
-													<li class="mega-col"><span class="title">Mega Menu Title</span>
-														<ul><!-- Mega Menu Items -->
-															<li><a href="#">Lists</a></li>
-															<li><a href="#">Image Container</a></li>
-														</ul>
-													</li>
-													<!-- End Mega Column -->
-													<!-- Start Mega Column -->
-													<li class="mega-col"><span class="title">Mega Menu Title</span>
-														<ul><!-- Mega Menu Items -->
-															<li><a href="#">Social Buttons</a></li>
-															<li><a href="#">Tabs</a></li>
-														</ul>
-													</li>
-													<!-- End Mega Column -->
-												</ul>
+												<!--<ul class="mega-menu three-column mega-center">-->
+													<!--&lt;!&ndash; Start Mega Column &ndash;&gt;-->
+													<!--<li class="mega-col"><span class="title">Mega Menu Title</span>-->
+														<!--<ul>&lt;!&ndash; Mega Menu Items &ndash;&gt;-->
+															<!--<li><a href="#">Accordions</a></li>-->
+															<!--<li><a href="#">Alarts</a></li>-->
+														<!--</ul>-->
+													<!--</li>-->
+													<!--&lt;!&ndash; End Mega Column &ndash;&gt;-->
+													<!--&lt;!&ndash; Start Mega Column &ndash;&gt;-->
+													<!--<li class="mega-col"><span class="title">Mega Menu Title</span>-->
+														<!--<ul>&lt;!&ndash; Mega Menu Items &ndash;&gt;-->
+															<!--<li><a href="#">Lists</a></li>-->
+															<!--<li><a href="#">Image Container</a></li>-->
+														<!--</ul>-->
+													<!--</li>-->
+													<!--&lt;!&ndash; End Mega Column &ndash;&gt;-->
+													<!--&lt;!&ndash; Start Mega Column &ndash;&gt;-->
+													<!--<li class="mega-col"><span class="title">Mega Menu Title</span>-->
+														<!--<ul>&lt;!&ndash; Mega Menu Items &ndash;&gt;-->
+															<!--<li><a href="#">Social Buttons</a></li>-->
+															<!--<li><a href="#">Tabs</a></li>-->
+														<!--</ul>-->
+													<!--</li>-->
+													<!--&lt;!&ndash; End Mega Column &ndash;&gt;-->
+												<!--</ul>-->
 												<!-- End Mega Menu -->
 											</li>
 											<li ><a href="contact.html">关于</a></li>
@@ -169,7 +169,7 @@
 							<!--搜索框-->
 							<div class="col-6 col-md-1 order-one">
 								<div class="header-search">
-									<form role="search" method="get" class="search-form" action="/api/v1/searchs/">
+									<form role="search" method="get" class="search-form" action="/api/v1/search/">
 										<label>
 											<input type="search" class="search-field" placeholder="Search …" name="title">
 										</label>
@@ -212,7 +212,7 @@
 								<ul class="breadcrumbs list-inline">
 									<li><a href="/">首页</a><i class="icofont-double-right"></i></li>
 									<!-- 通过vue中的compute值先计算出一个对象,然后在html中取出值,还可以进行拼接字符串操作 -->
-									<li>关于" <% mySearch | string_strap %> "的文章列表</li>
+									<li>关于" <% mySearch %> "的文章列表</li>
 								</ul>
 								<!-- End Breadcrumb -->
 							</div>
@@ -225,32 +225,33 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 col-sm-7 col-md-9">
+
 								<div id="primary" class="content-area" v-if="search_list.results.length > 0">
 									<!-- 文章列表 -->
 									<div class="single-news-wrap" v-for="search in search_list.results">
 										<!-- 文章图片 -->
 										<!--<div class="post-thumbnail">-->
-											<!--<img src="/static_files/img/post/pst-list-1.jpg" alt="" style="width: 500px;height: 250px;">-->
+											<!--<img src="/static_files/images/post/pst-list-1.jpg" alt="" style="width: 500px;height: 250px;">-->
 										<!--</div>-->
 										<!-- 文章标题 -->
 										<div class="entry-header">
 											<h4 class="entry-title">
-												<a :href="'/api/v1/article/?aid=' + search.object.id"><% search.object.title %></a>
+												<a :href="'/api/v1/article/?aid=' + search.id"><% search.title %></a>
 											</h4>
 										</div>
 										<!-- 文章的基本信息 -->
 										<div class="entry-meta">
-											<span><i class="icofont-user-alt-3"></i><% search.object.author %></span>
-											<span><i class="icofont-ui-calendar"></i><% search.object.create_time %></span>
+											<span><i class="icofont-user-alt-3"></i><% search.author %></span>
+											<span><i class="icofont-ui-calendar"></i><% search.create_time %></span>
 											<!-- 双层嵌套循环 -->
-											<span v-for="tag in search.object.tags">
+											<span v-for="tag in search.tags">
 												<i class="icofont-tag"></i>
 												<a href="#"><% tag %></a>
 											</span>
 										</div>
 										<!-- 文章摘要 -->
 										<div class="entry-content">
-											<p><% search.object.abstract %></p>
+											<p><% search.abstract %></p>
 										</div>
 									</div>
 
@@ -296,7 +297,7 @@
 								<aside id="secondary" class="widget-area">
 									<h4 class="widget-title">搜索文章标题</h4>
 									<div class="widget widget-search">
-										<form method="get" action="/api/v1/searchs/">
+										<form method="get" action="/api/v1/search/">
 											<div class="search-form">
 												<!-- input标签中的name属性值,会在form表单提交时自动带上输入框中的值 -->
 												<input class="search-field" placeholder="Search..."
@@ -351,7 +352,7 @@
 									<p>
 										© 2018 <a href="/">JinQuanLin.</a> All Right Reserved
 										<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">
-											<img src="/static_files/img/beianbgs.png" alt="beianbgs" style="width: 14px; height: 16px;">
+											<img src="/static_files/images/beianbgs.png" alt="beianbgs" style="width: 14px; height: 16px;">
 											粤ICP备18104884-2号
 										</a>
 									</p>
