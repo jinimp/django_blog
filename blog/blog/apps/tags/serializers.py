@@ -38,4 +38,4 @@ class ArticleTagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = ('id', 'author', 'title', 'abstract', 'tags',
-                  'create_time', 'category_id', 'article_image')
+                  'create_time', 'category_id')

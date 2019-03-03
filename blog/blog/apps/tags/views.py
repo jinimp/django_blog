@@ -62,17 +62,20 @@ class ArticleTagView(ListAPIView):
         # ---------------- 1.获取参数 ------------------- #
 
         # 获取标签的id
-        try:
-            # 获取指定的标签
-            tid = self.request.query_params['tid']
-            # 获取该分类的id
-            cid = self.request.query_params['cid']
-            # ---------------- 3.业务处理 ------------------- #
-            query_obj = Article.objects.filter(tags=tid, category_id=cid)
-        except:
-            # ---------------- 3.业务处理 ------------------- #
-            # 如果没有传入tid值,则查询所有的标签名称对应的文章
+
+        # 获取指定的标签
+        tid = self.request.query_params.get('tid', None)
+        # 获取该分类的id
+        cid = self.request.query_params.get('cid', None)
+
+        if not cid:
+            return Response(data={'msg': '参数错误！'})
+        # ---------------- 3.业务处理 ------------------- #
+        # 如果没有传入tid值,则查询所有的标签名称对应的文章
+        if not tid:
             query_obj = Article.objects.all()
+        else:
+            query_obj = Article.objects.filter(tags=tid, category_id=cid)
 
         # 给查询集修改或添加属性,通过如下方法是不起作用的,因此不要在视图中修改属性值，
         # 在序列化器中修改即可！！！
