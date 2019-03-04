@@ -196,12 +196,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
 # 访问的静态文件的时候使用的前缀,而不是静态文件存放的目录的名字(即访问时以/static/访问, 但是存储在/static_files/)
 STATIC_URL = '/static/'
 # 静态文件存放的位置
 STATIC_ROOT = [os.path.join(BASE_DIR, 'static_files')]
-
 
 # ------------------------------ 配置日志 ------------------------------ #
 LOGGING = {
